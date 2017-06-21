@@ -1,0 +1,45 @@
+PODS:
+  - JXHTTP (3.0.2)
+  - Keys (1.0.0)
+  - Spectacles (1.0.1)
+  - TMTumblrSDK (4.0.4):
+    - TMTumblrSDK/Activity (= 4.0.4)
+    - TMTumblrSDK/APIClient (= 4.0.4)
+    - TMTumblrSDK/AppClient (= 4.0.4)
+    - TMTumblrSDK/Core (= 4.0.4)
+  - TMTumblrSDK/Activity (4.0.4)
+  - TMTumblrSDK/APIClient (4.0.4):
+    - JXHTTP
+    - TMTumblrSDK/APIClient/Authentication (= 4.0.4)
+  - TMTumblrSDK/APIClient/Authentication (4.0.4):
+    - JXHTTP
+    - TMTumblrSDK/Core
+  - TMTumblrSDK/AppClient (4.0.4):
+    - TMTumblrSDK/Core
+  - TMTumblrSDK/Core (4.0.4):
+    - Spectacles (~> 1.0)
+
+DEPENDENCIES:
+  - Keys (from `Pods/CocoaPodsKeys`)
+  - TMTumblrSDK (from `https://github.com/tumblr/TMTumblrSDK.git`)
+
+EXTERNAL SOURCES:
+  Keys:
+    :path: Pods/CocoaPodsKeys
+  TMTumblrSDK:
+    :git: https://github.com/tumblr/TMTumblrSDK.git
+
+CHECKOUT OPTIONS:
+  TMTumblrSDK:
+    :commit: c76c771c15d275d70c2881734924a19016ed2302
+    :git: https://github.com/tumblr/TMTumblrSDK.git
+
+SPEC CHECKSUMS:
+  JXHTTP: c37120f210cd2dfcb3470d70239f5253335e2f1a
+  Keys: 9c35bf00f612ee1d48556f4a4b9b4551e224e90f
+  Spectacles: 8dc60711140320653724560e2d6bbb8a8f0940e4
+  TMTumblrSDK: 7b253e968a31f515aee0ee5f7e5faa8b7b0d0470
+
+PODFILE CHECKSUM: 1537a34db0fa85d73d6bacb404ce2d436601172c
+
+COCOAPODS: 1.2.1

@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02E397C4EC803B519183B103 /* Pods_yomblrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB80E03F25C01D972D206CA /* Pods_yomblrTests.framework */; };
 		1FAAC93B1EFAC0C900D3CC49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAC93A1EFAC0C900D3CC49 /* AppDelegate.swift */; };
 		1FAAC93D1EFAC0C900D3CC49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAC93C1EFAC0C900D3CC49 /* ViewController.swift */; };
 		1FAAC9401EFAC0C900D3CC49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FAAC93E1EFAC0C900D3CC49 /* Main.storyboard */; };
 		1FAAC9421EFAC0C900D3CC49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FAAC9411EFAC0C900D3CC49 /* Assets.xcassets */; };
 		1FAAC9451EFAC0C900D3CC49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FAAC9431EFAC0C900D3CC49 /* LaunchScreen.storyboard */; };
 		1FAAC9501EFAC0C900D3CC49 /* yomblrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAC94F1EFAC0C900D3CC49 /* yomblrTests.swift */; };
+		8845C115356A0E95317FC5A8 /* Pods_yomblr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C0E586FC5DF424D85C3AF9 /* Pods_yomblr.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1EA259018F439F32865E905D /* Pods-yomblrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yomblrTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-yomblrTests/Pods-yomblrTests.release.xcconfig"; sourceTree = "<group>"; };
 		1FAAC9371EFAC0C900D3CC49 /* yomblr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yomblr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FAAC93A1EFAC0C900D3CC49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FAAC93C1EFAC0C900D3CC49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +39,11 @@
 		1FAAC94B1EFAC0C900D3CC49 /* yomblrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yomblrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FAAC94F1EFAC0C900D3CC49 /* yomblrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yomblrTests.swift; sourceTree = "<group>"; };
 		1FAAC9511EFAC0C900D3CC49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69893A253F5819B2BF6A5EB4 /* Pods-yomblr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yomblr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-yomblr/Pods-yomblr.debug.xcconfig"; sourceTree = "<group>"; };
+		77C0E586FC5DF424D85C3AF9 /* Pods_yomblr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yomblr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8D806C022FF80752C5CE8A0 /* Pods-yomblrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yomblrTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-yomblrTests/Pods-yomblrTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AFB80E03F25C01D972D206CA /* Pods_yomblrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yomblrTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0742637185C05EE8C2DACD2 /* Pods-yomblr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yomblr.release.xcconfig"; path = "Pods/Target Support Files/Pods-yomblr/Pods-yomblr.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8845C115356A0E95317FC5A8 /* Pods_yomblr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +59,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02E397C4EC803B519183B103 /* Pods_yomblrTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1197294B20D7B4190B4ECE2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				69893A253F5819B2BF6A5EB4 /* Pods-yomblr.debug.xcconfig */,
+				E0742637185C05EE8C2DACD2 /* Pods-yomblr.release.xcconfig */,
+				A8D806C022FF80752C5CE8A0 /* Pods-yomblrTests.debug.xcconfig */,
+				1EA259018F439F32865E905D /* Pods-yomblrTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		1FAAC92E1EFAC0C800D3CC49 = {
 			isa = PBXGroup;
 			children = (
 				1FAAC9391EFAC0C900D3CC49 /* yomblr */,
 				1FAAC94E1EFAC0C900D3CC49 /* yomblrTests */,
 				1FAAC9381EFAC0C900D3CC49 /* Products */,
+				1197294B20D7B4190B4ECE2F /* Pods */,
+				94DE5621A8C121F71F0F645C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +119,15 @@
 			path = yomblrTests;
 			sourceTree = "<group>";
 		};
+		94DE5621A8C121F71F0F645C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77C0E586FC5DF424D85C3AF9 /* Pods_yomblr.framework */,
+				AFB80E03F25C01D972D206CA /* Pods_yomblrTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FAAC9541EFAC0C900D3CC49 /* Build configuration list for PBXNativeTarget "yomblr" */;
 			buildPhases = (
+				CE1DF27F014F68E566ADC689 /* [CP] Check Pods Manifest.lock */,
 				1FAAC9331EFAC0C900D3CC49 /* Sources */,
 				1FAAC9341EFAC0C900D3CC49 /* Frameworks */,
 				1FAAC9351EFAC0C900D3CC49 /* Resources */,
+				875EB968F416629D1CD8EAC3 /* [CP] Embed Pods Frameworks */,
+				D5D73647E319B9A7B12799F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FAAC9571EFAC0C900D3CC49 /* Build configuration list for PBXNativeTarget "yomblrTests" */;
 			buildPhases = (
+				6EA49B5FA5F9748F72194372 /* [CP] Check Pods Manifest.lock */,
 				1FAAC9471EFAC0C900D3CC49 /* Sources */,
 				1FAAC9481EFAC0C900D3CC49 /* Frameworks */,
 				1FAAC9491EFAC0C900D3CC49 /* Resources */,
+				5C17259FD6DC6058325DD9EA /* [CP] Embed Pods Frameworks */,
+				918D520BE801A531F132DA12 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,6 +184,7 @@
 				TargetAttributes = {
 					1FAAC9361EFAC0C900D3CC49 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = NYT8BVWJBJ;
 						ProvisioningStyle = Automatic;
 					};
 					1FAAC94A1EFAC0C900D3CC49 = {
@@ -193,6 +232,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C17259FD6DC6058325DD9EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yomblrTests/Pods-yomblrTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6EA49B5FA5F9748F72194372 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		875EB968F416629D1CD8EAC3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yomblr/Pods-yomblr-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		918D520BE801A531F132DA12 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yomblrTests/Pods-yomblrTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE1DF27F014F68E566ADC689 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D5D73647E319B9A7B12799F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yomblr/Pods-yomblr-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1FAAC9331EFAC0C900D3CC49 /* Sources */ = {
@@ -339,8 +471,10 @@
 		};
 		1FAAC9551EFAC0C900D3CC49 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69893A253F5819B2BF6A5EB4 /* Pods-yomblr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NYT8BVWJBJ;
 				INFOPLIST_FILE = yomblr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.ykws.yomblr;
@@ -351,8 +485,10 @@
 		};
 		1FAAC9561EFAC0C900D3CC49 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0742637185C05EE8C2DACD2 /* Pods-yomblr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NYT8BVWJBJ;
 				INFOPLIST_FILE = yomblr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.ykws.yomblr;
@@ -363,6 +499,7 @@
 		};
 		1FAAC9581EFAC0C900D3CC49 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8D806C022FF80752C5CE8A0 /* Pods-yomblrTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -377,6 +514,7 @@
 		};
 		1FAAC9591EFAC0C900D3CC49 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EA259018F439F32865E905D /* Pods-yomblrTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -408,6 +546,7 @@
 				1FAAC9561EFAC0C900D3CC49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1FAAC9571EFAC0C900D3CC49 /* Build configuration list for PBXNativeTarget "yomblrTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +555,7 @@
 				1FAAC9591EFAC0C900D3CC49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

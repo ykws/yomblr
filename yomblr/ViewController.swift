@@ -7,12 +7,23 @@
 //
 
 import UIKit
+import TMTumblrSDK
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var message: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        TMAPIClient.sharedInstance().authenticate("yomblr", from: self, callback: { error in
+            if (error != nil) {
+                self.message.text = error?.localizedDescription
+                return
+            }
+            
+            self.message.text = "Authenticated on Tumblr!"
+        })
     }
 
     override func didReceiveMemoryWarning() {
