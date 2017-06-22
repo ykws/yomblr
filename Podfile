@@ -4,6 +4,7 @@ target 'yomblr' do
   use_frameworks!
   
   pod 'TMTumblrSDK', git: 'https://github.com/tumblr/TMTumblrSDK.git'
+  pod 'SDWebImage'
 
   target 'yomblrTests' do
     inherit! :search_paths

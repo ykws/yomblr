@@ -1,16 +1,7 @@
 # yomblr
 
-only authenticate.
+only authenticate, dashboard type photo limit 1.
 
-## Use libraries
-
-Tumblr SDK for iOS
-
-http://tumblr.github.com/TMTumblrSDK
-
-cocoapods-keys
-
-https://github.com/orta/cocoapods-keys
 
 ## Installation
 
@@ -42,3 +33,16 @@ Saved OAuthConsumerSecret to yomblr.
 ...
 ```
 
+## Use libraries
+
+Tumblr SDK for iOS
+
+http://tumblr.github.com/TMTumblrSDK
+
+A key value store for application keys
+
+https://github.com/orta/cocoapods-keys
+
+Asynchronous image donwnloader
+
+https://github.com/rs/SDWebImage
