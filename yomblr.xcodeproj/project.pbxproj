@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		02E397C4EC803B519183B103 /* Pods_yomblrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB80E03F25C01D972D206CA /* Pods_yomblrTests.framework */; };
+		1F8CC1AF1EFB9D1C00398E3F /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CC1AE1EFB9D1C00398E3F /* CropViewController.swift */; };
+		1F8CC1B11EFBA89700398E3F /* CroppedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CC1B01EFBA89700398E3F /* CroppedViewController.swift */; };
 		1FAAC93B1EFAC0C900D3CC49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAC93A1EFAC0C900D3CC49 /* AppDelegate.swift */; };
 		1FAAC93D1EFAC0C900D3CC49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAC93C1EFAC0C900D3CC49 /* ViewController.swift */; };
 		1FAAC9401EFAC0C900D3CC49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FAAC93E1EFAC0C900D3CC49 /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		1EA259018F439F32865E905D /* Pods-yomblrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yomblrTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-yomblrTests/Pods-yomblrTests.release.xcconfig"; sourceTree = "<group>"; };
+		1F8CC1AE1EFB9D1C00398E3F /* CropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
+		1F8CC1B01EFBA89700398E3F /* CroppedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CroppedViewController.swift; sourceTree = "<group>"; };
 		1FAAC9371EFAC0C900D3CC49 /* yomblr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yomblr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FAAC93A1EFAC0C900D3CC49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FAAC93C1EFAC0C900D3CC49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 			children = (
 				1FAAC93A1EFAC0C900D3CC49 /* AppDelegate.swift */,
 				1FAAC93C1EFAC0C900D3CC49 /* ViewController.swift */,
+				1F8CC1AE1EFB9D1C00398E3F /* CropViewController.swift */,
+				1F8CC1B01EFBA89700398E3F /* CroppedViewController.swift */,
 				1FAAC93E1EFAC0C900D3CC49 /* Main.storyboard */,
 				1FAAC9411EFAC0C900D3CC49 /* Assets.xcassets */,
 				1FAAC9431EFAC0C900D3CC49 /* LaunchScreen.storyboard */,
@@ -333,6 +339,8 @@
 			files = (
 				1FAAC93D1EFAC0C900D3CC49 /* ViewController.swift in Sources */,
 				1FAAC93B1EFAC0C900D3CC49 /* AppDelegate.swift in Sources */,
+				1F8CC1B11EFBA89700398E3F /* CroppedViewController.swift in Sources */,
+				1F8CC1AF1EFB9D1C00398E3F /* CropViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

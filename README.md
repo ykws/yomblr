@@ -1,7 +1,6 @@
 # yomblr
 
-only authenticate, dashboard type photo limit 1.
-
+Authenticate to Tumblr, after show a latest photo on dashboard, and crop image.
 
 ## Installation
 
@@ -43,6 +42,10 @@ A key value store for application keys
 
 https://github.com/orta/cocoapods-keys
 
-Asynchronous image donwnloader
+Asynchronous image downloader
 
 https://github.com/rs/SDWebImage
+
+Crop image
+
+https://github.com/artemkrachulov/AKImageCropperView
