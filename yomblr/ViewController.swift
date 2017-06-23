@@ -26,31 +26,73 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    guard let oAuthToken = UserDefaults.standard.string(forKey: "OAuthToken"),
+      let oAuthTokenSecret = UserDefaults.standard.string(forKey: "OAuthTokenSecret") else {
+      authenticate()
+      return
+    }
+
+    TMAPIClient.sharedInstance().oAuthToken = oAuthToken
+    TMAPIClient.sharedInstance().oAuthTokenSecret = oAuthTokenSecret
+    showDashboard()
+  }
+
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
+
+  // MARK: - Navigation
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if let cropViewController: CropViewController = segue.destination as? CropViewController {
+      cropViewController.blogName = blogName
+      cropViewController.image = photo.image
+      cropViewController.postUrl = postUrl
+    }
+  }
+
+  // MARK: - Tumblr
+
+  func authenticate() {
     TMAPIClient.sharedInstance().authenticate("yomblr", from: self, callback: { error in
       if (error != nil) {
         print("\(String(describing: error?.localizedDescription))")
         return
       }
-      
-      TMAPIClient.sharedInstance().userInfo({ result, error in
-        if (error != nil) {
-          print("\(String(describing: error?.localizedDescription))")
+
+      guard let oAuthToken = TMAPIClient.sharedInstance().oAuthToken,
+        let oAuthTokenSecret = TMAPIClient.sharedInstance().oAuthTokenSecret else {
+          print("can't retrieve OAuthToken or OAuthTokenSecret")
           return
-        }
-        
-        guard let dictionary = result as? [String: Any] else {
-          print("result was not JSON.")
-          return
-        }
-        
-        guard let user = dictionary["user"] as? [String: Any] else {
-          print("result was not found \"user\".")
-          return
-        }
-        
-        self.blogName = user["name"] as? String
-      })
-      
+      }
+
+      UserDefaults.standard.set(oAuthToken, forKey: "OAuthToken")
+      UserDefaults.standard.set(oAuthTokenSecret, forKey: "OAuthTokenSecret")
+
+      self.showDashboard()
+    })
+  }
+
+  func showDashboard() {
+    TMAPIClient.sharedInstance().userInfo({ result, error in
+      if (error != nil) {
+        print("\(String(describing: error?.localizedDescription))")
+        return
+      }
+
+      guard let dictionary = result as? [String: Any] else {
+        print("result was not JSON.")
+        return
+      }
+
+      guard let user = dictionary["user"] as? [String: Any] else {
+        print("result was not found \"user\".")
+        return
+      }
+
+      self.blogName = user["name"] as? String
+
       TMAPIClient.sharedInstance().dashboard(["type": "photo", "limit": 1], callback: { result, error in
         if (error != nil) {
           print("\(String(describing: error?.localizedDescription))")
@@ -102,20 +144,5 @@ class ViewController: UIViewController {
         self.photo.sd_setImage(with: URL(string: url), placeholderImage: nil)
       })
     })
-  }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-
-  // MARK: - Navigation
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if let cropViewController: CropViewController = segue.destination as? CropViewController {
-      cropViewController.blogName = blogName
-      cropViewController.image = photo.image
-      cropViewController.postUrl = postUrl
-    }
   }
 }
