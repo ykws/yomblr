@@ -1,6 +1,6 @@
 # yomblr
 
-Authenticate to Tumblr, after show a latest photo on dashboard, and crop image.
+Minimum Tumblr Client. Only cropped image post.
 
 ## Installation
 

@@ -13,7 +13,9 @@ class CropViewController: UIViewController {
   
   // MARK: - Properties
   
+  var blogName: String!
   var image: UIImage!
+  var postUrl: String!
   
   // MARK: - Outlets
   
@@ -31,6 +33,10 @@ class CropViewController: UIViewController {
   // MARK: - Navigation
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    (segue.destination as! CroppedViewController).image = cropView.croppedImage
+    if let croppedViewController: CroppedViewController = segue.destination as? CroppedViewController {
+      croppedViewController.blogName = blogName
+      croppedViewController.image = cropView.croppedImage
+      croppedViewController.postUrl = postUrl
+    }
   }
 }

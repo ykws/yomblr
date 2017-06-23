@@ -112,6 +112,13 @@
                             <constraint firstAttribute="trailing" secondItem="l8r-6g-07J" secondAttribute="trailing" id="s6K-7W-afm"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="3v8-qv-ZVN">
+                        <barButtonItem key="rightBarButtonItem" title="Post" id="Z5M-p2-I2f">
+                            <connections>
+                                <action selector="post:" destination="Mkr-O5-LWq" id="BIR-VC-DXq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="croppedView" destination="l8r-6g-07J" id="4Ej-UC-fBo"/>
                     </connections>

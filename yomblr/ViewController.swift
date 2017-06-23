@@ -12,6 +12,11 @@ import SDWebImage
 
 class ViewController: UIViewController {
   
+  // MARK: - Properties
+  
+  var blogName: String!
+  var postUrl: String!
+  
   // MARK: - Outlets
 
   @IBOutlet weak var photo: UIImageView!
@@ -27,7 +32,26 @@ class ViewController: UIViewController {
         return
       }
       
-      TMAPIClient.sharedInstance().dashboard(["type": "photo", "limit": 1], callback: { result, erro in
+      TMAPIClient.sharedInstance().userInfo({ result, error in
+        if (error != nil) {
+          print("\(String(describing: error?.localizedDescription))")
+          return
+        }
+        
+        guard let dictionary = result as? [String: Any] else {
+          print("result was not JSON.")
+          return
+        }
+        
+        guard let user = dictionary["user"] as? [String: Any] else {
+          print("result was not found \"user\".")
+          return
+        }
+        
+        self.blogName = user["name"] as? String
+      })
+      
+      TMAPIClient.sharedInstance().dashboard(["type": "photo", "limit": 1], callback: { result, error in
         if (error != nil) {
           print("\(String(describing: error?.localizedDescription))")
           return
@@ -47,6 +71,8 @@ class ViewController: UIViewController {
           print("\"posts\" counts is 0.")
           return
         }
+        
+        self.postUrl = postObject["post_url"] as? String
         
         guard let photoObjects = postObject["photos"] as? [Any] else {
           print("result was not fount \"photos\".")
@@ -86,6 +112,10 @@ class ViewController: UIViewController {
   // MARK: - Navigation
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    (segue.destination as! CropViewController).image = photo.image
+    if let cropViewController: CropViewController = segue.destination as? CropViewController {
+      cropViewController.blogName = blogName
+      cropViewController.image = photo.image
+      cropViewController.postUrl = postUrl
+    }
   }
 }
