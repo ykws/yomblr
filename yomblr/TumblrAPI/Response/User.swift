@@ -5,11 +5,12 @@
 //  Created by Yoshiyuki Kawashima on 2017/06/24.
 //  Copyright © 2017 ykws. All rights reserved.
 //
-//  Tumblr API User's Information Responses
-//
-//  https://www.tumblr.com/docs/en/api/v2#user-methods
-//
 
+/**
+ Tumblr API /user/info - Get a User's Information Responses
+
+ https://www.tumblr.com/docs/en/api/v2#user-methods
+ */
 struct User : JSONDecodable {
   let following: Int
   let defaultPostFormat: String

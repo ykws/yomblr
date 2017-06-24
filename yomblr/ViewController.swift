@@ -15,7 +15,7 @@ class ViewController: UIViewController {
   // MARK: - Properties
   
   var user: User!
-  var postUrl: String!
+  var dashboard: Dashboard!
   
   // MARK: - Outlets
 
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
     if let cropViewController: CropViewController = segue.destination as? CropViewController {
       cropViewController.blogName = user.blogs.first?.name
       cropViewController.image = photo.image
-      cropViewController.postUrl = postUrl
+      cropViewController.postUrl = dashboard.posts.first?.photos.first?.altSizes.first?.url
     }
   }
 
@@ -88,51 +88,21 @@ class ViewController: UIViewController {
         return
       }
 
-      TMAPIClient.sharedInstance().dashboard(["type": "photo", "limit": 1], callback: { result, error in
+      TMAPIClient.sharedInstance().dashboard(["type": "photo", "limit": 1], callback: { response, error in
         if (error != nil) {
           print("\(String(describing: error?.localizedDescription))")
           return
         }
 
-        guard let dictionary = result as? [String: Any] else {
-          print("result was not JSON.")
+        do {
+          self.dashboard = try Dashboard.init(json: response!)
+        } catch {
+          print("Error: \(error)")
           return
         }
         
-        guard let postObjects = dictionary["posts"] as? [Any] else {
-          print("result was not fount \"posts\".")
-          return
-        }
-        
-        guard let postObject = postObjects[0] as? [String: Any] else {
-          print("\"posts\" counts is 0.")
-          return
-        }
-        
-        self.postUrl = postObject["post_url"] as? String
-        
-        guard let photoObjects = postObject["photos"] as? [Any] else {
-          print("result was not fount \"photos\".")
-          return
-        }
-        
-        guard let photoObject = photoObjects[0] as? [String: Any] else {
-          print("\"photos\" counts is 0.")
-          return
-        }
-        
-        guard let altSizeObjects = photoObject["alt_sizes"] as? [Any] else {
-          print("result was not fount \"alt_sizes\".")
-          return
-        }
-        
-        guard let altSizeObject = altSizeObjects[0] as? [String: Any] else {
-          print("\"alt_size\" counts is 0.")
-          return
-        }
-        
-        guard let url = altSizeObject["url"] as? String else {
-          print("result was not fount \"url\".")
+        guard let url = self.dashboard.posts.first?.photos.first?.altSizes.first?.url else {
+          print("Nothing post.")
           return
         }
         
