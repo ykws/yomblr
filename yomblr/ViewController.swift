@@ -14,7 +14,7 @@ class ViewController: UIViewController {
   
   // MARK: - Properties
   
-  var blogName: String!
+  var user: User!
   var postUrl: String!
   
   // MARK: - Outlets
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if let cropViewController: CropViewController = segue.destination as? CropViewController {
-      cropViewController.blogName = blogName
+      cropViewController.blogName = user.blogs.first?.name
       cropViewController.image = photo.image
       cropViewController.postUrl = postUrl
     }
@@ -75,23 +75,18 @@ class ViewController: UIViewController {
   }
 
   func showDashboard() {
-    TMAPIClient.sharedInstance().userInfo({ result, error in
+    TMAPIClient.sharedInstance().userInfo({ response, error in
       if (error != nil) {
         print("\(String(describing: error?.localizedDescription))")
         return
       }
-
-      guard let dictionary = result as? [String: Any] else {
-        print("result was not JSON.")
+      
+      do {
+        self.user = try User.init(json: response!)
+      } catch {
+        print("Error: \(error)")
         return
       }
-
-      guard let user = dictionary["user"] as? [String: Any] else {
-        print("result was not found \"user\".")
-        return
-      }
-
-      self.blogName = user["name"] as? String
 
       TMAPIClient.sharedInstance().dashboard(["type": "photo", "limit": 1], callback: { result, error in
         if (error != nil) {

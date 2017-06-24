@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		02E397C4EC803B519183B103 /* Pods_yomblrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB80E03F25C01D972D206CA /* Pods_yomblrTests.framework */; };
+		1F5BD6A81EFDF330005CFCB7 /* Blog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BD6A71EFDF330005CFCB7 /* Blog.swift */; };
+		1F5BD6A91EFDF330005CFCB7 /* Blog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BD6A71EFDF330005CFCB7 /* Blog.swift */; };
+		1F5BD6AB1EFDF418005CFCB7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BD6AA1EFDF418005CFCB7 /* User.swift */; };
+		1F5BD6AC1EFDF418005CFCB7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BD6AA1EFDF418005CFCB7 /* User.swift */; };
+		1F5BD6AE1EFDF6B2005CFCB7 /* JSONDecodeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BD6AD1EFDF6B2005CFCB7 /* JSONDecodeError.swift */; };
+		1F5BD6AF1EFDF6B2005CFCB7 /* JSONDecodeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BD6AD1EFDF6B2005CFCB7 /* JSONDecodeError.swift */; };
+		1F5BD6B11EFDF8F7005CFCB7 /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BD6B01EFDF8F7005CFCB7 /* JSONDecodable.swift */; };
+		1F5BD6B21EFDF8F7005CFCB7 /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BD6B01EFDF8F7005CFCB7 /* JSONDecodable.swift */; };
 		1F8CC1AF1EFB9D1C00398E3F /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CC1AE1EFB9D1C00398E3F /* CropViewController.swift */; };
 		1F8CC1B11EFBA89700398E3F /* CroppedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CC1B01EFBA89700398E3F /* CroppedViewController.swift */; };
 		1FAAC93B1EFAC0C900D3CC49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAC93A1EFAC0C900D3CC49 /* AppDelegate.swift */; };
@@ -31,6 +39,10 @@
 
 /* Begin PBXFileReference section */
 		1EA259018F439F32865E905D /* Pods-yomblrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yomblrTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-yomblrTests/Pods-yomblrTests.release.xcconfig"; sourceTree = "<group>"; };
+		1F5BD6A71EFDF330005CFCB7 /* Blog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Blog.swift; path = TumblrAPI/Response/Blog.swift; sourceTree = "<group>"; };
+		1F5BD6AA1EFDF418005CFCB7 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = TumblrAPI/Response/User.swift; sourceTree = "<group>"; };
+		1F5BD6AD1EFDF6B2005CFCB7 /* JSONDecodeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONDecodeError.swift; path = TumblrAPI/Response/JSONDecodeError.swift; sourceTree = "<group>"; };
+		1F5BD6B01EFDF8F7005CFCB7 /* JSONDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONDecodable.swift; path = TumblrAPI/Response/JSONDecodable.swift; sourceTree = "<group>"; };
 		1F8CC1AE1EFB9D1C00398E3F /* CropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
 		1F8CC1B01EFBA89700398E3F /* CroppedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CroppedViewController.swift; sourceTree = "<group>"; };
 		1FAAC9371EFAC0C900D3CC49 /* yomblr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yomblr.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +93,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		1F5BD6A51EFDF289005CFCB7 /* TumblrAPI */ = {
+			isa = PBXGroup;
+			children = (
+				1F5BD6A61EFDF2EA005CFCB7 /* Response */,
+			);
+			name = TumblrAPI;
+			sourceTree = "<group>";
+		};
+		1F5BD6A61EFDF2EA005CFCB7 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				1F5BD6A71EFDF330005CFCB7 /* Blog.swift */,
+				1F5BD6AA1EFDF418005CFCB7 /* User.swift */,
+				1F5BD6AD1EFDF6B2005CFCB7 /* JSONDecodeError.swift */,
+				1F5BD6B01EFDF8F7005CFCB7 /* JSONDecodable.swift */,
+			);
+			name = Response;
+			sourceTree = "<group>";
+		};
 		1FAAC92E1EFAC0C800D3CC49 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +135,7 @@
 		1FAAC9391EFAC0C900D3CC49 /* yomblr */ = {
 			isa = PBXGroup;
 			children = (
+				1F5BD6A51EFDF289005CFCB7 /* TumblrAPI */,
 				1FAAC93A1EFAC0C900D3CC49 /* AppDelegate.swift */,
 				1FAAC93C1EFAC0C900D3CC49 /* ViewController.swift */,
 				1F8CC1AE1EFB9D1C00398E3F /* CropViewController.swift */,
@@ -339,8 +371,12 @@
 			files = (
 				1FAAC93D1EFAC0C900D3CC49 /* ViewController.swift in Sources */,
 				1FAAC93B1EFAC0C900D3CC49 /* AppDelegate.swift in Sources */,
+				1F5BD6AB1EFDF418005CFCB7 /* User.swift in Sources */,
+				1F5BD6B11EFDF8F7005CFCB7 /* JSONDecodable.swift in Sources */,
+				1F5BD6A81EFDF330005CFCB7 /* Blog.swift in Sources */,
 				1F8CC1B11EFBA89700398E3F /* CroppedViewController.swift in Sources */,
 				1F8CC1AF1EFB9D1C00398E3F /* CropViewController.swift in Sources */,
+				1F5BD6AE1EFDF6B2005CFCB7 /* JSONDecodeError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +384,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F5BD6AF1EFDF6B2005CFCB7 /* JSONDecodeError.swift in Sources */,
+				1F5BD6B21EFDF8F7005CFCB7 /* JSONDecodable.swift in Sources */,
 				1FAAC9501EFAC0C900D3CC49 /* yomblrTests.swift in Sources */,
+				1F5BD6A91EFDF330005CFCB7 /* Blog.swift in Sources */,
+				1F5BD6AC1EFDF418005CFCB7 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
