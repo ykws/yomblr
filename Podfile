@@ -6,6 +6,7 @@ target 'yomblr' do
   pod 'TMTumblrSDK', git: 'https://github.com/tumblr/TMTumblrSDK.git'
   pod 'SDWebImage'
   pod 'AKImageCropperView', git: 'https://github.com/ykws/AKImageCropperView.git', branch: 'develop-improve'
+  pod 'MBProgressHUD'
 
   target 'yomblrTests' do
     inherit! :search_paths

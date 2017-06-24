@@ -8,6 +8,7 @@
 
 import UIKit
 import TMTumblrSDK
+import MBProgressHUD
 
 class CroppedViewController: UIViewController {
   
@@ -24,15 +25,12 @@ class CroppedViewController: UIViewController {
   // MARK: - Actions
   
   @IBAction func post(_ sender: Any) {
-    let base64Image: String = (UIImagePNGRepresentation(image)?.base64EncodedString())!
-    TMAPIClient.sharedInstance().post(blogName, type: "photo", parameters: ["link": postUrl, "data64": base64Image], callback: { result, error in
-      if (error != nil) {
-        print("\(String(describing: error?.localizedDescription))")
-        return
-      }
-
-      self.navigationController?.popToRootViewController(animated: true)
-    })
+    guard let base64EncodedString = UIImagePNGRepresentation(image)?.base64EncodedString() else {
+      print("can't Base64 encode.")
+      return
+    }
+    
+    requestPhotoPost(withImageBase64EncodedString: base64EncodedString)
   }
   
   // MARK: - Life Cycle
@@ -41,5 +39,24 @@ class CroppedViewController: UIViewController {
     super.viewDidLoad()
     
     croppedView.image = image
+  }
+  
+  // MARK: - Tumblr
+  
+  func requestPhotoPost(withImageBase64EncodedString data64: String) {
+    let hud = MBProgressHUD.showAdded(to: view, animated: true)
+    hud.mode = .indeterminate
+    hud.label.text = "Uploading..."
+    
+    TMAPIClient.sharedInstance().post(blogName, type: "photo", parameters: ["link": postUrl, "data64": data64], callback: { response, error in
+      hud.hide(animated: true)
+      
+      if (error != nil) {
+        print("\(String(describing: error?.localizedDescription))")
+        return
+      }
+
+      self.navigationController?.popToRootViewController(animated: true)
+    })   
   }
 }

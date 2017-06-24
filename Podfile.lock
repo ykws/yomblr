@@ -2,6 +2,7 @@ PODS:
   - AKImageCropperView (2.0.0)
   - JXHTTP (3.0.2)
   - Keys (1.0.0)
+  - MBProgressHUD (1.0.0)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
@@ -26,6 +27,7 @@ PODS:
 DEPENDENCIES:
   - AKImageCropperView (from `https://github.com/ykws/AKImageCropperView.git`, branch `develop-improve`)
   - Keys (from `Pods/CocoaPodsKeys`)
+  - MBProgressHUD
   - SDWebImage
   - TMTumblrSDK (from `https://github.com/tumblr/TMTumblrSDK.git`)
 
@@ -50,10 +52,11 @@ SPEC CHECKSUMS:
   AKImageCropperView: 3f83fcee0c89c24ea121bd7283c15ef693006f2f
   JXHTTP: c37120f210cd2dfcb3470d70239f5253335e2f1a
   Keys: 9c35bf00f612ee1d48556f4a4b9b4551e224e90f
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   Spectacles: 8dc60711140320653724560e2d6bbb8a8f0940e4
   TMTumblrSDK: 7b253e968a31f515aee0ee5f7e5faa8b7b0d0470
 
-PODFILE CHECKSUM: 85ae7fa39b1ad7d8cf0ec29318e50f725294fda7
+PODFILE CHECKSUM: c259bb57cb3f14dcfbf1e6f7bbf5bb49944ebb67
 
 COCOAPODS: 1.2.1

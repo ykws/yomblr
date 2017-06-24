@@ -22,14 +22,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1ls-ZA-xEb">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                             </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2jH-59-5ff">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="L2R-qa-1Yb"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Next" id="EiF-th-gyf">
+                                        <connections>
+                                            <action selector="next:" destination="BYZ-38-t0r" id="1tW-DH-V4u"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Prev" id="bBr-iG-zU0">
+                                        <connections>
+                                            <action selector="prev:" destination="BYZ-38-t0r" id="jRZ-eL-bqw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1ls-ZA-xEb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="H0Y-Eg-1Tb"/>
+                            <constraint firstItem="2jH-59-5ff" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Mtd-IM-Eeq"/>
+                            <constraint firstItem="2jH-59-5ff" firstAttribute="top" secondItem="1ls-ZA-xEb" secondAttribute="bottom" id="OAP-pl-tCb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2jH-59-5ff" secondAttribute="bottom" id="RZi-nh-6nP"/>
+                            <constraint firstItem="2jH-59-5ff" firstAttribute="top" secondItem="1ls-ZA-xEb" secondAttribute="bottom" id="lj4-Re-t6w"/>
                             <constraint firstAttribute="trailing" secondItem="1ls-ZA-xEb" secondAttribute="trailing" id="naX-ZX-AbY"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1ls-ZA-xEb" secondAttribute="bottom" id="p8U-zA-Dhl"/>
+                            <constraint firstAttribute="trailing" secondItem="2jH-59-5ff" secondAttribute="trailing" id="sLy-zu-twq"/>
                             <constraint firstItem="1ls-ZA-xEb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tug-9b-XUn"/>
                         </constraints>
                     </view>
