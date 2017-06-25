@@ -30,45 +30,22 @@ class ViewController: UIViewController {
   @IBAction func dashboard(_ sender: Any) {
     TMTumblrAppClient.viewDashboard()
   }
-  
-  @IBAction func next(_ sender: Any) {
-    photoIndex -= 1
-    guard photoIndex >= 0 else {
-      postIndex -= 1
-      guard postIndex >= 0 else {
-        refreshView()
-        return
-      }
-
-      photoIndex = posts[postIndex].photos.count - 1
-      updatePhoto(withPostIndex: postIndex, withPhotoIndex: photoIndex)
-      return
-    }
-    
-    updatePhoto(withPostIndex: postIndex, withPhotoIndex: photoIndex)
-  }
-
-  @IBAction func prev(_ sender: Any) {
-    photoIndex += 1
-    guard photoIndex < posts[postIndex].photos.count else {
-      postIndex += 1
-      guard postIndex < posts.count else {
-        refreshView(withOffset: postIndex)
-        return
-      }
-
-      photoIndex = 0
-      updatePhoto(withPostIndex: postIndex)
-      return
-    }
-
-    updatePhoto(withPostIndex: postIndex, withPhotoIndex: photoIndex)
-  }
 
   // MARK: - Life Cycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture(gesture:)))
+    swipeRight.direction = UISwipeGestureRecognizerDirection.right
+    view.addGestureRecognizer(swipeRight)
+    
+    let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture(gesture:)))
+    swipeLeft.direction = UISwipeGestureRecognizerDirection.left
+    view.addGestureRecognizer(swipeLeft)
+    
+    let longPress = UILongPressGestureRecognizer(target: self, action: #selector(respondToLongPressGesture(gesture:)))
+    view.addGestureRecognizer(longPress)
     
     guard let oAuthToken = UserDefaults.standard.string(forKey: "OAuthToken"),
       let oAuthTokenSecret = UserDefaults.standard.string(forKey: "OAuthTokenSecret") else {
@@ -92,7 +69,7 @@ class ViewController: UIViewController {
     if let cropViewController: CropViewController = segue.destination as? CropViewController {
       cropViewController.blogName = user.blogs.first?.name
       cropViewController.image = photo.image
-      cropViewController.postUrl = posts[postIndex].photos.first?.altSizes.first?.url
+      cropViewController.postUrl = posts[postIndex].photos[photoIndex].altSizes.first?.url
     }
   }
 
@@ -102,7 +79,7 @@ class ViewController: UIViewController {
     let hud = showProgress(withMessage: "Requesting authenticate...")
     
     TMAPIClient.sharedInstance().authenticate("yomblr", from: self, callback: { error in
-      hud.hide(animated: true)
+      self.hideProgress(hud: hud)
       
       if (error != nil) {
         self.showError(error!)
@@ -126,7 +103,7 @@ class ViewController: UIViewController {
     let hud = showProgress(withMessage: "Requesting user's information...")
     
     TMAPIClient.sharedInstance().userInfo({ response, error in
-      hud.hide(animated: true)
+      self.hideProgress(hud: hud)
       
       if (error != nil) {
         self.showError(error!)
@@ -148,7 +125,7 @@ class ViewController: UIViewController {
     let hud = showProgress(withMessage: "Requesting dashboard...")
     
     TMAPIClient.sharedInstance().dashboard(["offset": offset, "type": "photo"], callback: { response, error in
-      hud.hide(animated: true)
+      self.hideProgress(hud: hud)
       
       if (error != nil) {
         self.showError(error!)
@@ -169,7 +146,7 @@ class ViewController: UIViewController {
     let hud = showProgress(withMessage: "Requesting likes...")
     
     TMAPIClient.sharedInstance().likes(user.blogs.first?.name, parameters: ["offset": offset], callback: { response, error in
-      hud.hide(animated: true)
+      self.hideProgress(hud: hud)
 
       if (error != nil) {
         self.showError(error!)
@@ -217,26 +194,71 @@ class ViewController: UIViewController {
     photo.sd_setIndicatorStyle(.gray)
     photo.sd_setImage(with: URL(string: url), placeholderImage: nil)
   }
+
+  // MARK: - Controller
   
-  // MARK: - HUD
-  
-  func showProgress(withMessage message: String) -> MBProgressHUD {
-    let hud = MBProgressHUD.showAdded(to: view, animated: true)
-    hud.mode = .indeterminate
-    hud.label.text = message
-    return hud
+  func next() {
+    photoIndex -= 1
+    guard photoIndex >= 0 else {
+      postIndex -= 1
+      guard postIndex >= 0 else {
+        refreshView()
+        return
+      }
+      
+      photoIndex = posts[postIndex].photos.count - 1
+      updatePhoto(withPostIndex: postIndex, withPhotoIndex: photoIndex)
+      return
+    }
+    
+    updatePhoto(withPostIndex: postIndex, withPhotoIndex: photoIndex)
   }
   
-  func showMessage(_ message: String) {
-    let hud = MBProgressHUD.showAdded(to: view, animated: true)
-    hud.mode = .text
-    hud.detailsLabel.text = message
+  func prev() {
+    photoIndex += 1
+    guard photoIndex < posts[postIndex].photos.count else {
+      postIndex += 1
+      guard postIndex < posts.count else {
+        refreshView(withOffset: postIndex)
+        return
+      }
+
+      photoIndex = 0
+      updatePhoto(withPostIndex: postIndex)
+      return
+    }
+
+    updatePhoto(withPostIndex: postIndex, withPhotoIndex: photoIndex)
   }
   
-  func showError(_ error: Error) {
-    let hud = MBProgressHUD.showAdded(to: view, animated: true)
-    hud.mode = .text
-    hud.detailsLabel.text = error.localizedDescription
-    print("Error: \(error)")
+  func crop() {
+    let cropViewController: CropViewController = storyboard?.instantiateViewController(withIdentifier: "crop") as! CropViewController
+    cropViewController.blogName = user.blogs.first?.name
+    cropViewController.image = photo.image
+    cropViewController.postUrl = posts[postIndex].photos[photoIndex].altSizes.first?.url
+    navigationController?.pushViewController(cropViewController, animated: true)
+  }
+  
+  // MARK: - Gesture
+  
+  func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+    if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+      switch swipeGesture.direction {
+      case UISwipeGestureRecognizerDirection.left:
+        prev()
+      case UISwipeGestureRecognizerDirection.right:
+        next()
+      default:
+        break;
+      }
+    }
+  }
+
+  func respondToLongPressGesture(gesture: UIGestureRecognizer) {
+    if gesture .state != .began {
+      return
+    }
+
+    crop()
   }
 }

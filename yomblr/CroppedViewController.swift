@@ -26,7 +26,7 @@ class CroppedViewController: UIViewController {
   
   @IBAction func post(_ sender: Any) {
     guard let base64EncodedString = UIImagePNGRepresentation(image)?.base64EncodedString() else {
-      print("can't Base64 encode.")
+      showMessage("Can't Base64 encode.")
       return
     }
     
@@ -44,15 +44,13 @@ class CroppedViewController: UIViewController {
   // MARK: - Tumblr
   
   func requestPhotoPost(withImageBase64EncodedString data64: String) {
-    let hud = MBProgressHUD.showAdded(to: view, animated: true)
-    hud.mode = .indeterminate
-    hud.label.text = "Uploading..."
+    let hud = showProgress(withMessage: "Uploading...")
     
     TMAPIClient.sharedInstance().post(blogName, type: "photo", parameters: ["link": postUrl, "data64": data64], callback: { response, error in
-      hud.hide(animated: true)
+      self.hideProgress(hud: hud)
       
       if (error != nil) {
-        print("\(String(describing: error?.localizedDescription))")
+        self.showError(error!)
         return
       }
 

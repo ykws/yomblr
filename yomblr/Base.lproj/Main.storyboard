@@ -35,16 +35,6 @@
                                             <action selector="dashboard:" destination="BYZ-38-t0r" id="BUR-mO-214"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Next" id="EiF-th-gyf">
-                                        <connections>
-                                            <action selector="next:" destination="BYZ-38-t0r" id="1tW-DH-V4u"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Prev" id="bBr-iG-zU0">
-                                        <connections>
-                                            <action selector="prev:" destination="BYZ-38-t0r" id="jRZ-eL-bqw"/>
-                                        </connections>
-                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -78,7 +68,7 @@
         <!--Crop View Controller-->
         <scene sceneID="Abf-0Z-yfn">
             <objects>
-                <viewController id="XBJ-2x-xtJ" customClass="CropViewController" customModule="yomblr" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="crop" id="XBJ-2x-xtJ" customClass="CropViewController" customModule="yomblr" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jrc-sR-vZE"/>
                         <viewControllerLayoutGuide type="bottom" id="8FD-1s-9Jm"/>
