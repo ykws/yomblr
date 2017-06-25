@@ -30,6 +30,11 @@
                                     <constraint firstAttribute="height" constant="44" id="L2R-qa-1Yb"/>
                                 </constraints>
                                 <items>
+                                    <barButtonItem title="Dashboard" id="FTb-9T-nEQ">
+                                        <connections>
+                                            <action selector="dashboard:" destination="BYZ-38-t0r" id="BUR-mO-214"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem title="Next" id="EiF-th-gyf">
                                         <connections>
                                             <action selector="next:" destination="BYZ-38-t0r" id="1tW-DH-V4u"/>

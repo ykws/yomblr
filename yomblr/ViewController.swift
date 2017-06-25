@@ -27,6 +27,10 @@ class ViewController: UIViewController {
 
   // MARK: - Actions
 
+  @IBAction func dashboard(_ sender: Any) {
+    TMTumblrAppClient.viewDashboard()
+  }
+  
   @IBAction func next(_ sender: Any) {
     photoIndex -= 1
     guard photoIndex >= 0 else {
