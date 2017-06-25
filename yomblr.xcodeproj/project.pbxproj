@@ -24,6 +24,8 @@
 		1F5BD6BE1EFE65D1005CFCB7 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BD6BC1EFE65D1005CFCB7 /* Photo.swift */; };
 		1F5BD6C01EFE6619005CFCB7 /* AltSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BD6BF1EFE6619005CFCB7 /* AltSize.swift */; };
 		1F5BD6C11EFE6619005CFCB7 /* AltSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BD6BF1EFE6619005CFCB7 /* AltSize.swift */; };
+		1F5BD6C51EFED237005CFCB7 /* Likes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BD6C41EFED237005CFCB7 /* Likes.swift */; };
+		1F5BD6C61EFED237005CFCB7 /* Likes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BD6C41EFED237005CFCB7 /* Likes.swift */; };
 		1F8CC1AF1EFB9D1C00398E3F /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CC1AE1EFB9D1C00398E3F /* CropViewController.swift */; };
 		1F8CC1B11EFBA89700398E3F /* CroppedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CC1B01EFBA89700398E3F /* CroppedViewController.swift */; };
 		1FAAC93B1EFAC0C900D3CC49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAC93A1EFAC0C900D3CC49 /* AppDelegate.swift */; };
@@ -55,6 +57,7 @@
 		1F5BD6B91EFE653A005CFCB7 /* PhotoPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoPost.swift; path = TumblrAPI/Response/PhotoPost.swift; sourceTree = "<group>"; };
 		1F5BD6BC1EFE65D1005CFCB7 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Photo.swift; path = TumblrAPI/Response/Photo.swift; sourceTree = "<group>"; };
 		1F5BD6BF1EFE6619005CFCB7 /* AltSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AltSize.swift; path = TumblrAPI/Response/AltSize.swift; sourceTree = "<group>"; };
+		1F5BD6C41EFED237005CFCB7 /* Likes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Likes.swift; sourceTree = "<group>"; };
 		1F8CC1AE1EFB9D1C00398E3F /* CropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
 		1F8CC1B01EFBA89700398E3F /* CroppedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CroppedViewController.swift; sourceTree = "<group>"; };
 		1FAAC9371EFAC0C900D3CC49 /* yomblr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yomblr.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +125,7 @@
 				1F5BD6B91EFE653A005CFCB7 /* PhotoPost.swift */,
 				1F5BD6BC1EFE65D1005CFCB7 /* Photo.swift */,
 				1F5BD6BF1EFE6619005CFCB7 /* AltSize.swift */,
+				1F5BD6C41EFED237005CFCB7 /* Likes.swift */,
 				1F5BD6AD1EFDF6B2005CFCB7 /* JSONDecodeError.swift */,
 				1F5BD6B01EFDF8F7005CFCB7 /* JSONDecodable.swift */,
 			);
@@ -389,6 +393,7 @@
 				1FAAC93D1EFAC0C900D3CC49 /* ViewController.swift in Sources */,
 				1FAAC93B1EFAC0C900D3CC49 /* AppDelegate.swift in Sources */,
 				1F5BD6AB1EFDF418005CFCB7 /* User.swift in Sources */,
+				1F5BD6C51EFED237005CFCB7 /* Likes.swift in Sources */,
 				1F5BD6B11EFDF8F7005CFCB7 /* JSONDecodable.swift in Sources */,
 				1F5BD6B41EFE59F4005CFCB7 /* Dashboard.swift in Sources */,
 				1F5BD6A81EFDF330005CFCB7 /* Blog.swift in Sources */,
@@ -408,6 +413,7 @@
 				1F5BD6B21EFDF8F7005CFCB7 /* JSONDecodable.swift in Sources */,
 				1FAAC9501EFAC0C900D3CC49 /* yomblrTests.swift in Sources */,
 				1F5BD6BE1EFE65D1005CFCB7 /* Photo.swift in Sources */,
+				1F5BD6C61EFED237005CFCB7 /* Likes.swift in Sources */,
 				1F5BD6A91EFDF330005CFCB7 /* Blog.swift in Sources */,
 				1F5BD6B51EFE59F4005CFCB7 /* Dashboard.swift in Sources */,
 				1F5BD6BB1EFE653A005CFCB7 /* PhotoPost.swift in Sources */,

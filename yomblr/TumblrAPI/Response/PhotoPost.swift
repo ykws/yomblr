@@ -73,6 +73,10 @@ struct PhotoPost : JSONDecodable {
       throw JSONDecodeError.missingValue(key: "type", actualValue: dictionary["type"])
     }
     
+    guard type == "photo" else {
+      throw JSONDecodeError.unsupportedType(type)
+    }
+    
     guard let timestamp = dictionary["timestamp"] as? Int else {
       throw JSONDecodeError.missingValue(key: "timestamp", actualValue: dictionary["timestamp"])
     }
