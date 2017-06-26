@@ -12,9 +12,13 @@ Install `cocoapods-keys`.
 $ bundle install
 ```
 
-Get `OAuth consumer Key` and `OAuth consumer Secret`.
+Get `OAuth consumer Key` and `OAuth consumer Secret` on Tumblr.
 
 https://www.tumblr.com/oauth/apps
+
+Get `App ID` on Hockey.
+
+https://rink.hockeyapp.net/manage/dashboard
 
 Install libraries and set up keys.
 Type your keys.
@@ -23,14 +27,18 @@ Type your keys.
 $ pod install
 
  CocoaPods-Keys has detected a keys mismatch for your setup.
- What is the key for OAuthConsumerKey
+ What is the key for TumblrOAuthConsumerKey
  > 
 
-Saved OAuthConsumerKey to yomblr.
- What is the key for OAuthConsumerSecret
+Saved TumblrOAuthConsumerKey to yomblr.
+ What is the key for TumblrOAuthConsumerSecret
  > 
 
-Saved OAuthConsumerSecret to yomblr.
+Saved TumblrOAuthConsumerSecret to yomblr.
+ What is the key for HockeyAppId
+ > 
+
+Saved HockeyAppId to yomblr.
 ...
 ```
 
@@ -51,3 +59,7 @@ https://github.com/rs/SDWebImage
 Crop image
 
 https://github.com/artemkrachulov/AKImageCropperView
+
+Hockey SDK for iOS
+
+https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-ios
