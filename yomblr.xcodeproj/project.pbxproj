@@ -17,6 +17,8 @@
 		1F0072D71EFF9F00006D24FA /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0072CE1EFF9F00006D24FA /* JSONDecodable.swift */; };
 		1F0072D81EFF9F00006D24FA /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0072CF1EFF9F00006D24FA /* Photo.swift */; };
 		1F0072D91EFF9F00006D24FA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0072D01EFF9F00006D24FA /* User.swift */; };
+		1F0072E31EFFA4B3006D24FA /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0072E11EFFA4B3006D24FA /* HockeySDK.framework */; };
+		1F0072E41EFFA4B3006D24FA /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1F0072E21EFFA4B3006D24FA /* HockeySDKResources.bundle */; };
 		1F5BD6E41EFF97B4005CFCB7 /* UIViewController+MBProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BD6E31EFF97B4005CFCB7 /* UIViewController+MBProgressHUD.swift */; };
 		1F5BD6E51EFF97B4005CFCB7 /* UIViewController+MBProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BD6E31EFF97B4005CFCB7 /* UIViewController+MBProgressHUD.swift */; };
 		1F8CC1AF1EFB9D1C00398E3F /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CC1AE1EFB9D1C00398E3F /* CropViewController.swift */; };
@@ -51,6 +53,8 @@
 		1F0072CE1EFF9F00006D24FA /* JSONDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONDecodable.swift; path = TumblrAPI/Responses/JSONDecodable.swift; sourceTree = "<group>"; };
 		1F0072CF1EFF9F00006D24FA /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Photo.swift; path = TumblrAPI/Responses/Photo.swift; sourceTree = "<group>"; };
 		1F0072D01EFF9F00006D24FA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = TumblrAPI/Responses/User.swift; sourceTree = "<group>"; };
+		1F0072E11EFFA4B3006D24FA /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HockeySDK.framework; sourceTree = "<group>"; };
+		1F0072E21EFFA4B3006D24FA /* HockeySDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HockeySDKResources.bundle; sourceTree = "<group>"; };
 		1F5BD6E31EFF97B4005CFCB7 /* UIViewController+MBProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+MBProgressHUD.swift"; path = "Extensions/UIViewController+MBProgressHUD.swift"; sourceTree = "<group>"; };
 		1F8CC1AE1EFB9D1C00398E3F /* CropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
 		1F8CC1B01EFBA89700398E3F /* CroppedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CroppedViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F0072E31EFFA4B3006D24FA /* HockeySDK.framework in Frameworks */,
 				8845C115356A0E95317FC5A8 /* Pods_yomblr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,6 +105,24 @@
 				1EA259018F439F32865E905D /* Pods-yomblrTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		1F0072DA1EFFA3F0006D24FA /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				1F0072E01EFFA4B3006D24FA /* HockeySDK.embeddedframework */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		1F0072E01EFFA4B3006D24FA /* HockeySDK.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				1F0072E11EFFA4B3006D24FA /* HockeySDK.framework */,
+				1F0072E21EFFA4B3006D24FA /* HockeySDKResources.bundle */,
+			);
+			name = HockeySDK.embeddedframework;
+			path = Vendor/HockeySDK.embeddedframework;
 			sourceTree = "<group>";
 		};
 		1F5BD6A51EFDF289005CFCB7 /* TumblrAPI */ = {
@@ -157,6 +180,7 @@
 		1FAAC9391EFAC0C900D3CC49 /* yomblr */ = {
 			isa = PBXGroup;
 			children = (
+				1F0072DA1EFFA3F0006D24FA /* Vendor */,
 				1F5BD6C71EFF9612005CFCB7 /* Extensions */,
 				1F5BD6A51EFDF289005CFCB7 /* TumblrAPI */,
 				1FAAC93A1EFAC0C900D3CC49 /* AppDelegate.swift */,
@@ -280,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FAAC9451EFAC0C900D3CC49 /* LaunchScreen.storyboard in Resources */,
+				1F0072E41EFFA4B3006D24FA /* HockeySDKResources.bundle in Resources */,
 				1FAAC9421EFAC0C900D3CC49 /* Assets.xcassets in Resources */,
 				1FAAC9401EFAC0C900D3CC49 /* Main.storyboard in Resources */,
 			);
@@ -549,6 +574,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NYT8BVWJBJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/yomblr/HockeySDK.embeddedframework",
+					"$(PROJECT_DIR)/yomblr/Vendor/HockeySDK.embeddedframework",
+				);
 				INFOPLIST_FILE = yomblr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.ykws.yomblr;
@@ -563,6 +593,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NYT8BVWJBJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/yomblr/HockeySDK.embeddedframework",
+					"$(PROJECT_DIR)/yomblr/Vendor/HockeySDK.embeddedframework",
+				);
 				INFOPLIST_FILE = yomblr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.ykws.yomblr;

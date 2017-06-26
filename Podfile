@@ -17,7 +17,8 @@ end
 plugin 'cocoapods-keys', {
   :project => 'yomblr',
   :keys => [
-    "OAuthConsumerKey",
-    "OAuthConsumerSecret"
+    "TumblrOAuthConsumerKey",
+    "TumblrOAuthConsumerSecret",
+    "HockeyAppId",
   ]
 }

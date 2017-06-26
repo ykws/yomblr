@@ -9,6 +9,7 @@
 import UIKit
 import Keys
 import TMTumblrSDK
+import HockeySDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,8 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     let keys = YomblrKeys()
-    TMAPIClient.sharedInstance().oAuthConsumerKey = keys.oAuthConsumerKey
-    TMAPIClient.sharedInstance().oAuthConsumerSecret = keys.oAuthConsumerSecret
+    
+    TMAPIClient.sharedInstance().oAuthConsumerKey = keys.tumblrOAuthConsumerKey
+    TMAPIClient.sharedInstance().oAuthConsumerSecret = keys.tumblrOAuthConsumerSecret
+    
+    BITHockeyManager.shared().configure(withIdentifier: keys.hockeyAppId)
+    BITHockeyManager.shared().start()
+    BITHockeyManager.shared().authenticator.authenticateInstallation()
     return true
   }
 

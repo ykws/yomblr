@@ -76,11 +76,7 @@ class ViewController: UIViewController {
   // MARK: - Tumblr
 
   func requestAuthenticate() {
-    let hud = showProgress(withMessage: "Requesting authenticate...")
-    
     TMAPIClient.sharedInstance().authenticate("yomblr", from: self, callback: { error in
-      self.hideProgress(hud: hud)
-      
       if (error != nil) {
         self.showError(error!)
         return
