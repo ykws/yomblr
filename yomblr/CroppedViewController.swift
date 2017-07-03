@@ -44,17 +44,12 @@ class CroppedViewController: UIViewController {
   // MARK: - Tumblr
   
   func requestPhotoPost(withImageBase64EncodedString data64: String) {
-    let hud = showProgress(withMessage: "Uploading...")
-    
     TMAPIClient.sharedInstance().post(blogName, type: "photo", parameters: ["link": postUrl, "data64": data64], callback: { response, error in
-      self.hideProgress(hud: hud)
-      
       if (error != nil) {
         self.showError(error!)
-        return
       }
-
-      self.navigationController?.popToRootViewController(animated: true)
-    })   
+    })
+    
+    self.navigationController?.popToRootViewController(animated: true)
   }
 }
