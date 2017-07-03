@@ -9,7 +9,7 @@ Minimum Tumblr Client. Only cropped image post.
 Install `cocoapods-keys`.
 
 ```
-$ bundle install
+$ bundle install --path vendor/bundle
 ```
 
 Get `OAuth consumer Key` and `OAuth consumer Secret` on Tumblr.
@@ -24,7 +24,7 @@ Install libraries and set up keys.
 Type your keys.
 
 ```
-$ pod install
+$ bundle exec pod install
 
  CocoaPods-Keys has detected a keys mismatch for your setup.
  What is the key for TumblrOAuthConsumerKey
