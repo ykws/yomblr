@@ -7,21 +7,21 @@ PODS:
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
   - Spectacles (1.0.1)
-  - TMTumblrSDK (4.0.4):
-    - TMTumblrSDK/Activity (= 4.0.4)
-    - TMTumblrSDK/APIClient (= 4.0.4)
-    - TMTumblrSDK/AppClient (= 4.0.4)
-    - TMTumblrSDK/Core (= 4.0.4)
-  - TMTumblrSDK/Activity (4.0.4)
-  - TMTumblrSDK/APIClient (4.0.4):
+  - TMTumblrSDK (4.0.5):
+    - TMTumblrSDK/Activity (= 4.0.5)
+    - TMTumblrSDK/APIClient (= 4.0.5)
+    - TMTumblrSDK/AppClient (= 4.0.5)
+    - TMTumblrSDK/Core (= 4.0.5)
+  - TMTumblrSDK/Activity (4.0.5)
+  - TMTumblrSDK/APIClient (4.0.5):
     - JXHTTP
-    - TMTumblrSDK/APIClient/Authentication (= 4.0.4)
-  - TMTumblrSDK/APIClient/Authentication (4.0.4):
+    - TMTumblrSDK/APIClient/Authentication (= 4.0.5)
+  - TMTumblrSDK/APIClient/Authentication (4.0.5):
     - JXHTTP
     - TMTumblrSDK/Core
-  - TMTumblrSDK/AppClient (4.0.4):
+  - TMTumblrSDK/AppClient (4.0.5):
     - TMTumblrSDK/Core
-  - TMTumblrSDK/Core (4.0.4):
+  - TMTumblrSDK/Core (4.0.5):
     - Spectacles (~> 1.0)
 
 DEPENDENCIES:
@@ -42,10 +42,10 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AKImageCropperView:
-    :commit: 1c434cfaf28d42a8db61517d653ac6640209ccf6
+    :commit: cf38f48d234d688792431ea9d304d581e3da9d69
     :git: https://github.com/ykws/AKImageCropperView.git
   TMTumblrSDK:
-    :commit: c76c771c15d275d70c2881734924a19016ed2302
+    :commit: c8013d5e5b51e937c29f7aa7aef2d34951e82895
     :git: https://github.com/tumblr/TMTumblrSDK.git
 
 SPEC CHECKSUMS:
@@ -55,7 +55,7 @@ SPEC CHECKSUMS:
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   Spectacles: 8dc60711140320653724560e2d6bbb8a8f0940e4
-  TMTumblrSDK: 7b253e968a31f515aee0ee5f7e5faa8b7b0d0470
+  TMTumblrSDK: bafecf74bb5dae10d42536d35229e40c18e9e4a1
 
 PODFILE CHECKSUM: 21095db13d8f8b4a458d749fef0ab09e43444e3b
 
