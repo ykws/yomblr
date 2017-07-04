@@ -576,7 +576,6 @@
 				DEVELOPMENT_TEAM = NYT8BVWJBJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/yomblr/HockeySDK.embeddedframework",
 					"$(PROJECT_DIR)/yomblr/Vendor/HockeySDK.embeddedframework",
 				);
 				INFOPLIST_FILE = yomblr/Info.plist;
@@ -595,7 +594,6 @@
 				DEVELOPMENT_TEAM = NYT8BVWJBJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/yomblr/HockeySDK.embeddedframework",
 					"$(PROJECT_DIR)/yomblr/Vendor/HockeySDK.embeddedframework",
 				);
 				INFOPLIST_FILE = yomblr/Info.plist;
