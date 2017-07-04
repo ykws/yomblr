@@ -1,5 +1,8 @@
 PODS:
   - AKImageCropperView (2.0.0)
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
   - JXHTTP (3.0.2)
   - Keys (1.0.0)
   - MBProgressHUD (1.0.0)
@@ -26,6 +29,7 @@ PODS:
 
 DEPENDENCIES:
   - AKImageCropperView (from `https://github.com/ykws/AKImageCropperView.git`, branch `develop-improve`)
+  - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - Keys (from `Pods/CocoaPodsKeys`)
   - MBProgressHUD
   - SDWebImage
@@ -35,6 +39,8 @@ EXTERNAL SOURCES:
   AKImageCropperView:
     :branch: develop-improve
     :git: https://github.com/ykws/AKImageCropperView.git
+  ChameleonFramework:
+    :git: https://github.com/ViccAlexander/Chameleon.git
   Keys:
     :path: Pods/CocoaPodsKeys
   TMTumblrSDK:
@@ -44,12 +50,16 @@ CHECKOUT OPTIONS:
   AKImageCropperView:
     :commit: cf38f48d234d688792431ea9d304d581e3da9d69
     :git: https://github.com/ykws/AKImageCropperView.git
+  ChameleonFramework:
+    :commit: 6dd284bde21ea2e7f9fd89bc36f40df16e16369d
+    :git: https://github.com/ViccAlexander/Chameleon.git
   TMTumblrSDK:
     :commit: c8013d5e5b51e937c29f7aa7aef2d34951e82895
     :git: https://github.com/tumblr/TMTumblrSDK.git
 
 SPEC CHECKSUMS:
   AKImageCropperView: 3f83fcee0c89c24ea121bd7283c15ef693006f2f
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   JXHTTP: c37120f210cd2dfcb3470d70239f5253335e2f1a
   Keys: 9c35bf00f612ee1d48556f4a4b9b4551e224e90f
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
@@ -57,6 +67,6 @@ SPEC CHECKSUMS:
   Spectacles: 8dc60711140320653724560e2d6bbb8a8f0940e4
   TMTumblrSDK: bafecf74bb5dae10d42536d35229e40c18e9e4a1
 
-PODFILE CHECKSUM: 21095db13d8f8b4a458d749fef0ab09e43444e3b
+PODFILE CHECKSUM: 154ba46762e2213fd794da07832847f488837eb6
 
 COCOAPODS: 1.2.1

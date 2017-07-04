@@ -10,6 +10,7 @@ import UIKit
 import TMTumblrSDK
 import SDWebImage
 import MBProgressHUD
+import ChameleonFramework
 
 class ViewController: UIViewController {
   
@@ -35,6 +36,8 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    setApplicationColor()
     
     let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture(gesture:)))
     swipeRight.direction = UISwipeGestureRecognizerDirection.right

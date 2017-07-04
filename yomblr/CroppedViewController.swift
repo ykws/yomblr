@@ -38,6 +38,8 @@ class CroppedViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    setApplicationColor()
+    
     croppedView.image = image
   }
   

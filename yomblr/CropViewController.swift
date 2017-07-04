@@ -26,6 +26,8 @@ class CropViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    setApplicationColor()
+    
     cropView.image = image
     cropView.showOverlayView(animationDuration: 0)
   }

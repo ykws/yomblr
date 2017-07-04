@@ -7,6 +7,7 @@ target 'yomblr' do
   pod 'SDWebImage'
   pod 'AKImageCropperView', git: 'https://github.com/ykws/AKImageCropperView.git', branch: 'develop-improve'
   pod 'MBProgressHUD'
+  pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
 
   target 'yomblrTests' do
     inherit! :search_paths
