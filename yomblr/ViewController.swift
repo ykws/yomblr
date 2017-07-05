@@ -47,6 +47,9 @@ class ViewController: UIViewController {
     swipeLeft.direction = UISwipeGestureRecognizerDirection.left
     view.addGestureRecognizer(swipeLeft)
     
+    let tap = UITapGestureRecognizer(target: self, action: #selector(respondToTapGesture(gesture:)))
+    view.addGestureRecognizer(tap)
+    
     let longPress = UILongPressGestureRecognizer(target: self, action: #selector(respondToLongPressGesture(gesture:)))
     view.addGestureRecognizer(longPress)
     
@@ -69,7 +72,9 @@ class ViewController: UIViewController {
   // MARK: - Navigation
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if let cropViewController: CropViewController = segue.destination as? CropViewController {
+    if let webViewController: WebViewController = segue.destination as? WebViewController {
+      initWebViewController(webViewController)
+    } else if let cropViewController: CropViewController = segue.destination as? CropViewController {
       cropViewController.blogName = user.blogs.first?.name
       cropViewController.image = photo.image
       cropViewController.postUrl = posts[postIndex].photos[photoIndex].altSizes.first?.url
@@ -230,6 +235,12 @@ class ViewController: UIViewController {
     updatePhoto(withPostIndex: postIndex, withPhotoIndex: photoIndex)
   }
   
+  func browse() {
+    let webViewController: WebViewController = storyboard?.instantiateViewController(withIdentifier: "web") as! WebViewController
+    initWebViewController(webViewController)
+    navigationController?.pushViewController(webViewController, animated: true)
+  }
+
   func crop() {
     let cropViewController: CropViewController = storyboard?.instantiateViewController(withIdentifier: "crop") as! CropViewController
     cropViewController.blogName = user.blogs.first?.name
@@ -248,9 +259,13 @@ class ViewController: UIViewController {
       case UISwipeGestureRecognizerDirection.right:
         next()
       default:
-        break;
+        break
       }
     }
+  }
+  
+  func respondToTapGesture(gesture: UIGestureRecognizer) {
+    browse()
   }
 
   func respondToLongPressGesture(gesture: UIGestureRecognizer) {
@@ -259,5 +274,20 @@ class ViewController: UIViewController {
     }
 
     crop()
+  }
+  
+  // MARK: - Initializer
+  
+  func initWebViewController(_ webViewController: WebViewController) {
+    webViewController.blogName = user.blogs.first?.name
+    
+    let targetString = posts[postIndex].sourceUrl ?? posts[postIndex].postUrl
+    if targetString.contains("%") {
+      webViewController.urlString = targetString
+      return
+    }
+    
+    let encodedString = targetString.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
+    webViewController.urlString = encodedString
   }
 }

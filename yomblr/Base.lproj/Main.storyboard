@@ -35,6 +35,11 @@
                                             <action selector="dashboard:" destination="BYZ-38-t0r" id="BUR-mO-214"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="Browse" id="eRh-pH-YTw">
+                                        <connections>
+                                            <segue destination="G0K-pU-1q9" kind="show" id="iaM-PV-IqG"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -63,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="-502" y="134"/>
         </scene>
         <!--Crop View Controller-->
         <scene sceneID="Abf-0Z-yfn">
@@ -103,7 +108,99 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IpI-a7-bDR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="909.60000000000002" y="136.28185907046478"/>
+            <point key="canvasLocation" x="1135" y="439"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="9mA-pZ-eLe">
+            <objects>
+                <viewController storyboardIdentifier="web" id="G0K-pU-1q9" customClass="WebViewController" customModule="yomblr" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jmv-12-NKt"/>
+                        <viewControllerLayoutGuide type="bottom" id="Af3-JC-tmZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wSo-Ph-Htk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xgr-Jy-vMn" customClass="WKWebView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xgr-Jy-vMn" firstAttribute="top" secondItem="jmv-12-NKt" secondAttribute="bottom" id="3MY-mk-HSa"/>
+                            <constraint firstItem="Xgr-Jy-vMn" firstAttribute="leading" secondItem="wSo-Ph-Htk" secondAttribute="leading" id="NDR-9z-8Uy"/>
+                            <constraint firstItem="Af3-JC-tmZ" firstAttribute="top" secondItem="Xgr-Jy-vMn" secondAttribute="bottom" id="j7L-uU-biN"/>
+                            <constraint firstAttribute="trailing" secondItem="Xgr-Jy-vMn" secondAttribute="trailing" id="za9-3t-4en"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wPU-lU-mjE">
+                        <barButtonItem key="rightBarButtonItem" title="Crop" id="AX7-Hx-rOB">
+                            <connections>
+                                <segue destination="XBJ-2x-xtJ" kind="show" id="oBN-DZ-xKh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sdq-FY-6O1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-503" y="910"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="jc2-xb-13d">
+            <objects>
+                <viewController storyboardIdentifier="image" id="j2Y-sc-LV0" customClass="ImageViewController" customModule="yomblr" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EPH-w9-9oW"/>
+                        <viewControllerLayoutGuide type="bottom" id="yyI-iJ-eVf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="37G-2l-0rz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vE4-TI-EEe">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vE4-TI-EEe" secondAttribute="trailing" id="2Mm-6D-tte"/>
+                            <constraint firstItem="vE4-TI-EEe" firstAttribute="top" secondItem="EPH-w9-9oW" secondAttribute="bottom" id="BEo-iq-Ekg"/>
+                            <constraint firstItem="yyI-iJ-eVf" firstAttribute="top" secondItem="vE4-TI-EEe" secondAttribute="bottom" id="URb-H0-VsA"/>
+                            <constraint firstItem="vE4-TI-EEe" firstAttribute="leading" secondItem="37G-2l-0rz" secondAttribute="leading" id="WX1-L6-bAD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZK4-Iy-AzO">
+                        <barButtonItem key="rightBarButtonItem" title="Crop" id="gSi-qt-f9l">
+                            <connections>
+                                <segue destination="XBJ-2x-xtJ" kind="show" id="mtT-Fk-Ycj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="photo" destination="vE4-TI-EEe" id="OBk-Le-SWq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hhN-rV-EKr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="314" y="1200"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3G7-rO-cxN">
+            <objects>
+                <navigationController id="kTs-3W-qgx" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2aq-yx-zAG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="j2Y-sc-LV0" kind="relationship" relationship="rootViewController" id="seg-uu-Li9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="guJ-J4-gOb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-503" y="1567"/>
         </scene>
         <!--Cropped View Controller-->
         <scene sceneID="YnS-tx-UVd">
@@ -142,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O5s-Yy-f9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1720.8" y="135.38230884557723"/>
+            <point key="canvasLocation" x="1937" y="439"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E25-Pf-tKH">
@@ -158,7 +255,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9lr-Pe-ZBJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-665" y="139"/>
+            <point key="canvasLocation" x="-1265" y="134"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="mtT-Fk-Ycj"/>
+    </inferredMetricsTieBreakers>
 </document>

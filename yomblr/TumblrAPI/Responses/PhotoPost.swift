@@ -42,6 +42,8 @@ struct PhotoPost : JSONDecodable {
   let tags: [String]
   let bookmarklet: Bool
   let mobile: Bool
+  let sourceUrl: String?
+  let sourceTitle: String?
   let liked: Bool
   let state: String
   
@@ -99,6 +101,8 @@ struct PhotoPost : JSONDecodable {
     
     let bookmarklet = dictionary["bookmarklet"] as? Bool ?? false
     let mobile = dictionary["mobile"] as? Bool ?? false
+    let sourceUrl = dictionary["source_url"] as? String ?? nil
+    let sourceTitle = dictionary["source_title"] as? String ?? nil
     
     guard let liked = dictionary["liked"] as? Bool else {
       throw JSONDecodeError.missingValue(key: "liked", actualValue: dictionary["liked"])
@@ -131,6 +135,8 @@ struct PhotoPost : JSONDecodable {
     self.tags = tags
     self.bookmarklet = bookmarklet
     self.mobile = mobile
+    self.sourceUrl = sourceUrl
+    self.sourceTitle = sourceTitle
     self.liked = liked
     self.state = state
     

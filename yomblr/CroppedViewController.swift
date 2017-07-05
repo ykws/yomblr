@@ -52,6 +52,6 @@ class CroppedViewController: UIViewController {
       }
     })
     
-    self.navigationController?.popToRootViewController(animated: true)
+    navigationController?.popToViewController(navigationController!.viewControllers[(navigationController?.viewControllers.count)! - 3], animated: true)
   }
 }

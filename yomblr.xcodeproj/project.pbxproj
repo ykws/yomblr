@@ -20,6 +20,8 @@
 		1F0072E31EFFA4B3006D24FA /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0072E11EFFA4B3006D24FA /* HockeySDK.framework */; };
 		1F0072E41EFFA4B3006D24FA /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1F0072E21EFFA4B3006D24FA /* HockeySDKResources.bundle */; };
 		1F0537981F0B664000FB792E /* UIViewController+ChameleonFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0537971F0B664000FB792E /* UIViewController+ChameleonFramework.swift */; };
+		1F05379D1F0B78DF00FB792E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F05379C1F0B78DF00FB792E /* WebViewController.swift */; };
+		1F05379F1F0BC2F100FB792E /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F05379E1F0BC2F100FB792E /* ImageViewController.swift */; };
 		1F5BD6E41EFF97B4005CFCB7 /* UIViewController+MBProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BD6E31EFF97B4005CFCB7 /* UIViewController+MBProgressHUD.swift */; };
 		1F5BD6E51EFF97B4005CFCB7 /* UIViewController+MBProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BD6E31EFF97B4005CFCB7 /* UIViewController+MBProgressHUD.swift */; };
 		1F8CC1AF1EFB9D1C00398E3F /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CC1AE1EFB9D1C00398E3F /* CropViewController.swift */; };
@@ -57,6 +59,8 @@
 		1F0072E11EFFA4B3006D24FA /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HockeySDK.framework; sourceTree = "<group>"; };
 		1F0072E21EFFA4B3006D24FA /* HockeySDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HockeySDKResources.bundle; sourceTree = "<group>"; };
 		1F0537971F0B664000FB792E /* UIViewController+ChameleonFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+ChameleonFramework.swift"; path = "Extensions/UIViewController+ChameleonFramework.swift"; sourceTree = "<group>"; };
+		1F05379C1F0B78DF00FB792E /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		1F05379E1F0BC2F100FB792E /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		1F5BD6E31EFF97B4005CFCB7 /* UIViewController+MBProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+MBProgressHUD.swift"; path = "Extensions/UIViewController+MBProgressHUD.swift"; sourceTree = "<group>"; };
 		1F8CC1AE1EFB9D1C00398E3F /* CropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
 		1F8CC1B01EFBA89700398E3F /* CroppedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CroppedViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 				1F5BD6A51EFDF289005CFCB7 /* TumblrAPI */,
 				1FAAC93A1EFAC0C900D3CC49 /* AppDelegate.swift */,
 				1FAAC93C1EFAC0C900D3CC49 /* ViewController.swift */,
+				1F05379C1F0B78DF00FB792E /* WebViewController.swift */,
+				1F05379E1F0BC2F100FB792E /* ImageViewController.swift */,
 				1F8CC1AE1EFB9D1C00398E3F /* CropViewController.swift */,
 				1F8CC1B01EFBA89700398E3F /* CroppedViewController.swift */,
 				1FAAC93E1EFAC0C900D3CC49 /* Main.storyboard */,
@@ -423,6 +429,7 @@
 				1FAAC93D1EFAC0C900D3CC49 /* ViewController.swift in Sources */,
 				1F5BD6E41EFF97B4005CFCB7 /* UIViewController+MBProgressHUD.swift in Sources */,
 				1F0537981F0B664000FB792E /* UIViewController+ChameleonFramework.swift in Sources */,
+				1F05379F1F0BC2F100FB792E /* ImageViewController.swift in Sources */,
 				1F0072D61EFF9F00006D24FA /* Dashboard.swift in Sources */,
 				1F0072D71EFF9F00006D24FA /* JSONDecodable.swift in Sources */,
 				1F0072D31EFF9F00006D24FA /* PhotoPost.swift in Sources */,
@@ -435,6 +442,7 @@
 				1F0072D51EFF9F00006D24FA /* Blog.swift in Sources */,
 				1F8CC1AF1EFB9D1C00398E3F /* CropViewController.swift in Sources */,
 				1F0072D21EFF9F00006D24FA /* Likes.swift in Sources */,
+				1F05379D1F0B78DF00FB792E /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
