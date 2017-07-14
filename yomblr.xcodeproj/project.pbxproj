@@ -17,8 +17,6 @@
 		1F0072D71EFF9F00006D24FA /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0072CE1EFF9F00006D24FA /* JSONDecodable.swift */; };
 		1F0072D81EFF9F00006D24FA /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0072CF1EFF9F00006D24FA /* Photo.swift */; };
 		1F0072D91EFF9F00006D24FA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0072D01EFF9F00006D24FA /* User.swift */; };
-		1F0072E31EFFA4B3006D24FA /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0072E11EFFA4B3006D24FA /* HockeySDK.framework */; };
-		1F0072E41EFFA4B3006D24FA /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1F0072E21EFFA4B3006D24FA /* HockeySDKResources.bundle */; };
 		1F0537981F0B664000FB792E /* UIViewController+ChameleonFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0537971F0B664000FB792E /* UIViewController+ChameleonFramework.swift */; };
 		1F05379D1F0B78DF00FB792E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F05379C1F0B78DF00FB792E /* WebViewController.swift */; };
 		1F05379F1F0BC2F100FB792E /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F05379E1F0BC2F100FB792E /* ImageViewController.swift */; };
@@ -56,8 +54,6 @@
 		1F0072CE1EFF9F00006D24FA /* JSONDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONDecodable.swift; path = TumblrAPI/Responses/JSONDecodable.swift; sourceTree = "<group>"; };
 		1F0072CF1EFF9F00006D24FA /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Photo.swift; path = TumblrAPI/Responses/Photo.swift; sourceTree = "<group>"; };
 		1F0072D01EFF9F00006D24FA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = TumblrAPI/Responses/User.swift; sourceTree = "<group>"; };
-		1F0072E11EFFA4B3006D24FA /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HockeySDK.framework; sourceTree = "<group>"; };
-		1F0072E21EFFA4B3006D24FA /* HockeySDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HockeySDKResources.bundle; sourceTree = "<group>"; };
 		1F0537971F0B664000FB792E /* UIViewController+ChameleonFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+ChameleonFramework.swift"; path = "Extensions/UIViewController+ChameleonFramework.swift"; sourceTree = "<group>"; };
 		1F05379C1F0B78DF00FB792E /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		1F05379E1F0BC2F100FB792E /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
@@ -86,7 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F0072E31EFFA4B3006D24FA /* HockeySDK.framework in Frameworks */,
 				8845C115356A0E95317FC5A8 /* Pods_yomblr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,24 +106,6 @@
 				1EA259018F439F32865E905D /* Pods-yomblrTests.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		1F0072DA1EFFA3F0006D24FA /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				1F0072E01EFFA4B3006D24FA /* HockeySDK.embeddedframework */,
-			);
-			name = Vendor;
-			sourceTree = "<group>";
-		};
-		1F0072E01EFFA4B3006D24FA /* HockeySDK.embeddedframework */ = {
-			isa = PBXGroup;
-			children = (
-				1F0072E11EFFA4B3006D24FA /* HockeySDK.framework */,
-				1F0072E21EFFA4B3006D24FA /* HockeySDKResources.bundle */,
-			);
-			name = HockeySDK.embeddedframework;
-			path = Vendor/HockeySDK.embeddedframework;
 			sourceTree = "<group>";
 		};
 		1F5BD6A51EFDF289005CFCB7 /* TumblrAPI */ = {
@@ -187,7 +164,6 @@
 		1FAAC9391EFAC0C900D3CC49 /* yomblr */ = {
 			isa = PBXGroup;
 			children = (
-				1F0072DA1EFFA3F0006D24FA /* Vendor */,
 				1F5BD6C71EFF9612005CFCB7 /* Extensions */,
 				1F5BD6A51EFDF289005CFCB7 /* TumblrAPI */,
 				1FAAC93A1EFAC0C900D3CC49 /* AppDelegate.swift */,
@@ -313,7 +289,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FAAC9451EFAC0C900D3CC49 /* LaunchScreen.storyboard in Resources */,
-				1F0072E41EFFA4B3006D24FA /* HockeySDKResources.bundle in Resources */,
 				1FAAC9421EFAC0C900D3CC49 /* Assets.xcassets in Resources */,
 				1FAAC9401EFAC0C900D3CC49 /* Main.storyboard in Resources */,
 			);

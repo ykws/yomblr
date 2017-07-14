@@ -9,7 +9,6 @@
 import UIKit
 import Keys
 import TMTumblrSDK
-import HockeySDK
 import ChameleonFramework
 
 @UIApplicationMain
@@ -23,10 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     TMAPIClient.sharedInstance().oAuthConsumerKey = keys.tumblrOAuthConsumerKey
     TMAPIClient.sharedInstance().oAuthConsumerSecret = keys.tumblrOAuthConsumerSecret
-    
-    BITHockeyManager.shared().configure(withIdentifier: keys.hockeyAppId)
-    BITHockeyManager.shared().start()
-    BITHockeyManager.shared().authenticator.authenticateInstallation()
     
     UIApplication.shared.statusBarStyle = .lightContent
     UINavigationBar.appearance().barTintColor = FlatBlack()

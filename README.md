@@ -35,10 +35,6 @@ Saved TumblrOAuthConsumerKey to yomblr.
  > 
 
 Saved TumblrOAuthConsumerSecret to yomblr.
- What is the key for HockeyAppId
- > 
-
-Saved HockeyAppId to yomblr.
 ...
 ```
 
@@ -59,7 +55,3 @@ https://github.com/rs/SDWebImage
 Crop image
 
 https://github.com/artemkrachulov/AKImageCropperView
-
-Hockey SDK for iOS
-
-https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/hockeyapp-for-ios
