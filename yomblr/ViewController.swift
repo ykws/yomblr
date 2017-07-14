@@ -236,9 +236,13 @@ class ViewController: UIViewController {
   }
   
   func browse() {
+    /*
+     * disabled browse feature
+     *
     let webViewController: WebViewController = storyboard?.instantiateViewController(withIdentifier: "web") as! WebViewController
     initWebViewController(webViewController)
     navigationController?.pushViewController(webViewController, animated: true)
+     */
   }
 
   func crop() {

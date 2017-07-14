@@ -35,11 +35,6 @@
                                             <action selector="dashboard:" destination="BYZ-38-t0r" id="BUR-mO-214"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Browse" id="eRh-pH-YTw">
-                                        <connections>
-                                            <segue destination="G0K-pU-1q9" kind="show" id="iaM-PV-IqG"/>
-                                        </connections>
-                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -147,61 +142,6 @@
             </objects>
             <point key="canvasLocation" x="-503" y="910"/>
         </scene>
-        <!--Image View Controller-->
-        <scene sceneID="jc2-xb-13d">
-            <objects>
-                <viewController storyboardIdentifier="image" id="j2Y-sc-LV0" customClass="ImageViewController" customModule="yomblr" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="EPH-w9-9oW"/>
-                        <viewControllerLayoutGuide type="bottom" id="yyI-iJ-eVf"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="37G-2l-0rz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vE4-TI-EEe">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="vE4-TI-EEe" secondAttribute="trailing" id="2Mm-6D-tte"/>
-                            <constraint firstItem="vE4-TI-EEe" firstAttribute="top" secondItem="EPH-w9-9oW" secondAttribute="bottom" id="BEo-iq-Ekg"/>
-                            <constraint firstItem="yyI-iJ-eVf" firstAttribute="top" secondItem="vE4-TI-EEe" secondAttribute="bottom" id="URb-H0-VsA"/>
-                            <constraint firstItem="vE4-TI-EEe" firstAttribute="leading" secondItem="37G-2l-0rz" secondAttribute="leading" id="WX1-L6-bAD"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="ZK4-Iy-AzO">
-                        <barButtonItem key="rightBarButtonItem" title="Crop" id="gSi-qt-f9l">
-                            <connections>
-                                <segue destination="XBJ-2x-xtJ" kind="show" id="mtT-Fk-Ycj"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="photo" destination="vE4-TI-EEe" id="OBk-Le-SWq"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hhN-rV-EKr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="314" y="1200"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="3G7-rO-cxN">
-            <objects>
-                <navigationController id="kTs-3W-qgx" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2aq-yx-zAG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="j2Y-sc-LV0" kind="relationship" relationship="rootViewController" id="seg-uu-Li9"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="guJ-J4-gOb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-503" y="1567"/>
-        </scene>
         <!--Cropped View Controller-->
         <scene sceneID="YnS-tx-UVd">
             <objects>
@@ -259,6 +199,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mtT-Fk-Ycj"/>
+        <segue reference="plU-ln-VyO"/>
     </inferredMetricsTieBreakers>
 </document>
