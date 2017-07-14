@@ -2,7 +2,7 @@
 
 ![Swift](https://img.shields.io/badge/Swift-3.1-orange.svg)
 
-Minimum Tumblr Client. Only cropped image post.
+Minimum Tumblr Client. Post cropped photo your likes on Tumblr.
 
 ## Installation
 
