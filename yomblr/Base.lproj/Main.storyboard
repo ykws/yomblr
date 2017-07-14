@@ -30,9 +30,15 @@
                                     <constraint firstAttribute="height" constant="44" id="L2R-qa-1Yb"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Dashboard" id="FTb-9T-nEQ">
+                                    <barButtonItem title="Next" id="FTb-9T-nEQ">
                                         <connections>
-                                            <action selector="dashboard:" destination="BYZ-38-t0r" id="BUR-mO-214"/>
+                                            <action selector="next:" destination="BYZ-38-t0r" id="3BX-n6-xuB"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JzI-7r-UTr"/>
+                                    <barButtonItem title="Prev" id="chl-bp-PKq">
+                                        <connections>
+                                            <action selector="prev:" destination="BYZ-38-t0r" id="jZW-3u-EMd"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -51,6 +57,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8R4-7n-gGH">
+                        <barButtonItem key="leftBarButtonItem" title="Dashboard" id="20j-GA-bi8">
+                            <connections>
+                                <action selector="dashboard:" destination="BYZ-38-t0r" id="U4x-QS-WhR"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Crop" id="yDj-qP-crx">
                             <connections>
                                 <segue destination="XBJ-2x-xtJ" kind="show" id="plU-ln-VyO"/>

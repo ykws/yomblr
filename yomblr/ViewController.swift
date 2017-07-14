@@ -32,6 +32,14 @@ class ViewController: UIViewController {
     TMTumblrAppClient.viewDashboard()
   }
 
+  @IBAction func next(_ sender: Any) {
+    nextPhoto()
+  }
+  
+  @IBAction func prev(_ sender: Any) {
+    prevPhoto()
+  }
+  
   // MARK: - Life Cycle
   
   override func viewDidLoad() {
@@ -201,7 +209,7 @@ class ViewController: UIViewController {
 
   // MARK: - Controller
   
-  func next() {
+  func nextPhoto() {
     photoIndex -= 1
     guard photoIndex >= 0 else {
       postIndex -= 1
@@ -218,7 +226,7 @@ class ViewController: UIViewController {
     updatePhoto(withPostIndex: postIndex, withPhotoIndex: photoIndex)
   }
   
-  func prev() {
+  func prevPhoto() {
     photoIndex += 1
     guard photoIndex < posts[postIndex].photos.count else {
       postIndex += 1
@@ -259,9 +267,9 @@ class ViewController: UIViewController {
     if let swipeGesture = gesture as? UISwipeGestureRecognizer {
       switch swipeGesture.direction {
       case UISwipeGestureRecognizerDirection.left:
-        prev()
+        prevPhoto()
       case UISwipeGestureRecognizerDirection.right:
-        next()
+        nextPhoto()
       default:
         break
       }
