@@ -35,6 +35,7 @@ extension UIViewController {
     let hud = MBProgressHUD.showAdded(to: view, animated: true)
     hud.mode = .text
     hud.detailsLabel.text = message
+    hud.hide(animated: true, afterDelay: 2)
   }
   
   /**

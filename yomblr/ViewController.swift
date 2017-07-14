@@ -167,6 +167,15 @@ class ViewController: UIViewController {
       
       do {
         let likes = try Likes.init(json: response!)
+        
+        // Cancel displaying previous photo if no more previous likes photo
+        if likes.likedPosts.count == 0 {
+          self.photoIndex -= 1
+          self.postIndex -= 1
+          self.showMessage("No more likes")
+          return
+        }
+        
         self.updatePosts(posts: likes.likedPosts, offset: offset)
         self.ignoreLikes += likes.ignoreCount
       } catch {
