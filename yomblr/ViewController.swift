@@ -12,34 +12,23 @@ import SDWebImage
 import MBProgressHUD
 import ChameleonFramework
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
   
   // MARK: - Properties
   
+  private let limit: Int = 20
+  
   var user: User!
-  var posts: [PhotoPost]!
-  var postIndex: Int = 0
-  var photoIndex: Int = 0
+  var posts: [PhotoPost] = Array()
+  var offset: Int = 0
   var ignoreLikes: Int = 0
   
-  // MARK: - Outlets
-
-  @IBOutlet weak var photo: UIImageView!
-
   // MARK: - Actions
 
   @IBAction func dashboard(_ sender: Any) {
     TMTumblrAppClient.viewDashboard()
   }
 
-  @IBAction func next(_ sender: Any) {
-    nextPhoto()
-  }
-  
-  @IBAction func prev(_ sender: Any) {
-    prevPhoto()
-  }
-  
   // MARK: - Life Cycle
   
   override func viewDidLoad() {
@@ -47,19 +36,10 @@ class ViewController: UIViewController {
     
     setApplicationColor()
     
-    let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture(gesture:)))
-    swipeRight.direction = UISwipeGestureRecognizerDirection.right
-    view.addGestureRecognizer(swipeRight)
-    
-    let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture(gesture:)))
-    swipeLeft.direction = UISwipeGestureRecognizerDirection.left
-    view.addGestureRecognizer(swipeLeft)
-    
-    let tap = UITapGestureRecognizer(target: self, action: #selector(respondToTapGesture(gesture:)))
-    view.addGestureRecognizer(tap)
-    
-    let longPress = UILongPressGestureRecognizer(target: self, action: #selector(respondToLongPressGesture(gesture:)))
-    view.addGestureRecognizer(longPress)
+    refreshControl = UIRefreshControl()
+    refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
+    refreshControl?.addTarget(self, action: #selector(requestLikes), for: UIControlEvents.valueChanged)
+    tableView.addSubview(refreshControl!)
     
     guard let oAuthToken = UserDefaults.standard.string(forKey: "OAuthToken"),
       let oAuthTokenSecret = UserDefaults.standard.string(forKey: "OAuthTokenSecret") else {
@@ -71,22 +51,74 @@ class ViewController: UIViewController {
     TMAPIClient.sharedInstance().oAuthTokenSecret = oAuthTokenSecret
     requestUserInfo()
   }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    navigationController?.setNavigationBarHidden(true, animated: animated)
+    super.viewWillAppear(animated)
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    navigationController?.setNavigationBarHidden(false, animated: animated)
+    super.viewWillDisappear(animated)
+  }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
 
-  // MARK: - Navigation
-
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if let webViewController: WebViewController = segue.destination as? WebViewController {
-      initWebViewController(webViewController)
-    } else if let cropViewController: CropViewController = segue.destination as? CropViewController {
-      cropViewController.blogName = user.blogs.first?.name
-      cropViewController.image = photo.image
-      cropViewController.postUrl = posts[postIndex].photos[photoIndex].altSizes.first?.url
+  // MARK: - TableView
+  
+  override func numberOfSections(in tableView: UITableView) -> Int {
+    return posts.count
+  }
+  
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return posts[section].photos.count
+  }
+  
+  override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    return section == 0 ? 0 : 20
+  }
+  
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    let screenWidth = UIScreen.main.bounds.size.width
+    
+    guard let altSize = posts[indexPath.section].photos[indexPath.row].altSizes.first else {
+      return screenWidth
     }
+    
+    let scale = screenWidth / CGFloat(altSize.width)
+    return CGFloat(altSize.height) * scale
+  }
+  
+  override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    let header = UIView()
+    header.backgroundColor = UIColor.clear
+    return header
+  }
+  
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    if indexPath.section == (offset + limit - 1) {
+      refreshView(withOffset: offset + limit)
+    }
+    
+    let cell: CustomCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomCell
+    
+    guard let url = posts[indexPath.section].photos[indexPath.row].altSizes.first?.url else {
+      showMessage("Can't retrieve url.")
+      return cell
+    }
+    
+    cell.photo.sd_setShowActivityIndicatorView(true)
+    cell.photo.sd_setIndicatorStyle(.gray)
+    cell.photo.sd_setImage(with: URL(string: url), placeholderImage: nil)
+    return cell
+  }
+  
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let cell: CustomCell = tableView.cellForRow(at: indexPath) as! CustomCell
+    crop(postIndex: indexPath.section, photoIndex: indexPath.row, image: cell.photo.image!)
   }
 
   // MARK: - Tumblr
@@ -146,7 +178,7 @@ class ViewController: UIViewController {
 
       do {
         let dashboard = try Dashboard.init(json: response!)
-        self.updatePosts(posts: dashboard.posts, offset: offset)
+        self.updatePosts(posts: dashboard.posts, offset: self.offset)
       } catch {
         self.showError(error)
         return
@@ -154,13 +186,14 @@ class ViewController: UIViewController {
     })
   }
   
-  func requestLikes(withOffset offset: Int = 0) {
+  func requestLikes(sender: AnyObject /*withOffset offset: Int = 0*/) {
     let hud = showProgress(withMessage: "Requesting likes...")
     
     TMAPIClient.sharedInstance().likes(user.blogs.first?.name, parameters: ["offset": offset], callback: { response, error in
       self.hideProgress(hud: hud)
 
       if (error != nil) {
+        self.refreshControl?.endRefreshing()
         self.showError(error!)
         return
       }
@@ -170,15 +203,16 @@ class ViewController: UIViewController {
         
         // Cancel displaying previous photo if no more previous likes photo
         if likes.likedPosts.count == 0 {
-          self.photoIndex -= 1
-          self.postIndex -= 1
+          self.refreshControl?.endRefreshing()
           self.showMessage("No more likes")
           return
         }
         
-        self.updatePosts(posts: likes.likedPosts, offset: offset)
+        self.updatePosts(posts: likes.likedPosts, offset: self.offset)
         self.ignoreLikes += likes.ignoreCount
+        self.refreshControl?.endRefreshing()
       } catch {
+        self.refreshControl?.endRefreshing()
         self.showError(error)
         return
       }
@@ -188,7 +222,8 @@ class ViewController: UIViewController {
   // MARK: - View
   
   func refreshView(withOffset offset: Int = 0) {
-    requestLikes(withOffset: offset == 0 ? offset : offset + ignoreLikes)
+    self.offset = offset == 0 ? offset : offset + ignoreLikes
+    requestLikes(sender: refreshControl!)
   }
   
   func updatePosts(posts: [PhotoPost], offset: Int) {
@@ -200,106 +235,30 @@ class ViewController: UIViewController {
       }
     }
     
-    self.postIndex = offset == 0 ? offset : offset - ignoreLikes
-    self.photoIndex = 0
-    self.updatePhoto(withPostIndex: self.postIndex)
-  }
-
-  func updatePhoto(withPostIndex postIndex: Int, withPhotoIndex photoIndex: Int = 0) {
-    guard let url = posts[postIndex].photos[photoIndex].altSizes.first?.url else {
-      showMessage("Can't retrieve url.")
-      return
-    }
+    self.offset = offset == 0 ? offset : offset - ignoreLikes
     
-    photo.sd_setShowActivityIndicatorView(true)
-    photo.sd_setIndicatorStyle(.gray)
-    photo.sd_setImage(with: URL(string: url), placeholderImage: nil)
+    tableView.reloadData()
   }
-
+  
   // MARK: - Controller
   
-  func nextPhoto() {
-    photoIndex -= 1
-    guard photoIndex >= 0 else {
-      postIndex -= 1
-      guard postIndex >= 0 else {
-        refreshView()
-        return
-      }
-      
-      photoIndex = posts[postIndex].photos.count - 1
-      updatePhoto(withPostIndex: postIndex, withPhotoIndex: photoIndex)
-      return
-    }
-    
-    updatePhoto(withPostIndex: postIndex, withPhotoIndex: photoIndex)
-  }
-  
-  func prevPhoto() {
-    photoIndex += 1
-    guard photoIndex < posts[postIndex].photos.count else {
-      postIndex += 1
-      guard postIndex < posts.count else {
-        refreshView(withOffset: postIndex)
-        return
-      }
-
-      photoIndex = 0
-      updatePhoto(withPostIndex: postIndex)
-      return
-    }
-
-    updatePhoto(withPostIndex: postIndex, withPhotoIndex: photoIndex)
-  }
-  
-  func browse() {
-    /*
-     * disabled browse feature
-     *
+  func browse(postIndex: Int) {
     let webViewController: WebViewController = storyboard?.instantiateViewController(withIdentifier: "web") as! WebViewController
-    initWebViewController(webViewController)
+    initWebViewController(webViewController, postIndex: postIndex)
     navigationController?.pushViewController(webViewController, animated: true)
-     */
   }
 
-  func crop() {
+  func crop(postIndex: Int, photoIndex: Int, image: UIImage) {
     let cropViewController: CropViewController = storyboard?.instantiateViewController(withIdentifier: "crop") as! CropViewController
     cropViewController.blogName = user.blogs.first?.name
-    cropViewController.image = photo.image
+    cropViewController.image = image
     cropViewController.postUrl = posts[postIndex].photos[photoIndex].altSizes.first?.url
     navigationController?.pushViewController(cropViewController, animated: true)
   }
   
-  // MARK: - Gesture
-  
-  func respondToSwipeGesture(gesture: UIGestureRecognizer) {
-    if let swipeGesture = gesture as? UISwipeGestureRecognizer {
-      switch swipeGesture.direction {
-      case UISwipeGestureRecognizerDirection.left:
-        prevPhoto()
-      case UISwipeGestureRecognizerDirection.right:
-        nextPhoto()
-      default:
-        break
-      }
-    }
-  }
-  
-  func respondToTapGesture(gesture: UIGestureRecognizer) {
-    browse()
-  }
-
-  func respondToLongPressGesture(gesture: UIGestureRecognizer) {
-    if gesture .state != .began {
-      return
-    }
-
-    crop()
-  }
-  
   // MARK: - Initializer
   
-  func initWebViewController(_ webViewController: WebViewController) {
+  func initWebViewController(_ webViewController: WebViewController, postIndex: Int) {
     webViewController.blogName = user.blogs.first?.name
     
     let targetString = posts[postIndex].sourceUrl ?? posts[postIndex].postUrl

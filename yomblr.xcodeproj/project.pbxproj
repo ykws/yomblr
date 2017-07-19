@@ -21,6 +21,7 @@
 		1F05379D1F0B78DF00FB792E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F05379C1F0B78DF00FB792E /* WebViewController.swift */; };
 		1F05379F1F0BC2F100FB792E /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F05379E1F0BC2F100FB792E /* ImageViewController.swift */; };
 		1F07F1061F1F5ABE00043563 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F07F1051F1F5ABE00043563 /* UIColorExtension.swift */; };
+		1F07F1081F1F5FB100043563 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F07F1071F1F5FB100043563 /* CustomCell.swift */; };
 		1F5BD6E41EFF97B4005CFCB7 /* UIViewController+MBProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BD6E31EFF97B4005CFCB7 /* UIViewController+MBProgressHUD.swift */; };
 		1F5BD6E51EFF97B4005CFCB7 /* UIViewController+MBProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BD6E31EFF97B4005CFCB7 /* UIViewController+MBProgressHUD.swift */; };
 		1F8CC1AF1EFB9D1C00398E3F /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CC1AE1EFB9D1C00398E3F /* CropViewController.swift */; };
@@ -59,6 +60,7 @@
 		1F05379C1F0B78DF00FB792E /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		1F05379E1F0BC2F100FB792E /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		1F07F1051F1F5ABE00043563 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = Extensions/UIColorExtension.swift; sourceTree = "<group>"; };
+		1F07F1071F1F5FB100043563 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		1F5BD6E31EFF97B4005CFCB7 /* UIViewController+MBProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+MBProgressHUD.swift"; path = "Extensions/UIViewController+MBProgressHUD.swift"; sourceTree = "<group>"; };
 		1F8CC1AE1EFB9D1C00398E3F /* CropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
 		1F8CC1B01EFBA89700398E3F /* CroppedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CroppedViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				1F05379E1F0BC2F100FB792E /* ImageViewController.swift */,
 				1F8CC1AE1EFB9D1C00398E3F /* CropViewController.swift */,
 				1F8CC1B01EFBA89700398E3F /* CroppedViewController.swift */,
+				1F07F1071F1F5FB100043563 /* CustomCell.swift */,
 				1FAAC93E1EFAC0C900D3CC49 /* Main.storyboard */,
 				1FAAC9411EFAC0C900D3CC49 /* Assets.xcassets */,
 				1FAAC9431EFAC0C900D3CC49 /* LaunchScreen.storyboard */,
@@ -412,6 +415,7 @@
 				1F07F1061F1F5ABE00043563 /* UIColorExtension.swift in Sources */,
 				1F0072D71EFF9F00006D24FA /* JSONDecodable.swift in Sources */,
 				1F0072D31EFF9F00006D24FA /* PhotoPost.swift in Sources */,
+				1F07F1081F1F5FB100043563 /* CustomCell.swift in Sources */,
 				1F0072D11EFF9F00006D24FA /* JSONDecodeError.swift in Sources */,
 				1F0072D91EFF9F00006D24FA /* User.swift in Sources */,
 				1F0072D81EFF9F00006D24FA /* Photo.swift in Sources */,
