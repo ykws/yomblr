@@ -12,7 +12,7 @@ import ChameleonFramework
 extension UIViewController {
   
   func setApplicationColor() {
-    view.backgroundColor = FlatBlack()
-    setThemeUsingPrimaryColor(.flatBlack, with: .contrast)
+    view.backgroundColor = UIColor.TumblrColor()
+    setThemeUsingPrimaryColor(UIColor.TumblrColor(), with: .contrast)
   }
 }

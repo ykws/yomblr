@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     TMAPIClient.sharedInstance().oAuthConsumerSecret = keys.tumblrOAuthConsumerSecret
     
     UIApplication.shared.statusBarStyle = .lightContent
-    UINavigationBar.appearance().barTintColor = FlatBlack()
+    UINavigationBar.appearance().barTintColor = UIColor.TumblrColor()
     UINavigationBar.appearance().tintColor = FlatWhite()
     return true
   }
