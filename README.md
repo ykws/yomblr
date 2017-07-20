@@ -7,18 +7,17 @@ Minimum Tumblr Client. Post cropped photo your likes on Tumblr.
 
 ## Installation
 
-### Install `cocoapods-keys`.
+Install `cocoapods-keys`.
 
 ```
 $ bundle install --path vendor/bundle
 ```
 
-### Get `OAuth consumer Key` and `OAuth consumer Secret` on Tumblr.
+Get `OAuth consumer Key` and `OAuth consumer Secret` on Tumblr.
 
 https://www.tumblr.com/oauth/apps
 
-### Install libraries and set up keys
-
+Install libraries and set up keys.
 Type your keys.
 
 ```
