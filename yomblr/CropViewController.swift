@@ -26,6 +26,8 @@ class CropViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+    
     setApplicationColor()
     
     cropView.image = image
