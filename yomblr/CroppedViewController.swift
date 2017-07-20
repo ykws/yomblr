@@ -9,6 +9,7 @@
 import UIKit
 import TMTumblrSDK
 import MBProgressHUD
+import Firebase
 
 class CroppedViewController: UIViewController {
   
@@ -25,6 +26,7 @@ class CroppedViewController: UIViewController {
   // MARK: - Actions
   
   @IBAction func post(_ sender: Any) {
+    logEvent(title: "Post", type: "Button")
     guard let base64EncodedString = UIImagePNGRepresentation(image)?.base64EncodedString() else {
       showMessage("Can't Base64 encode.")
       return

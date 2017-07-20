@@ -8,6 +8,7 @@
 
 import UIKit
 import AKImageCropperView
+import Firebase
 
 class CropViewController: UIViewController {
   
@@ -38,6 +39,7 @@ class CropViewController: UIViewController {
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if let croppedViewController: CroppedViewController = segue.destination as? CroppedViewController {
+      logEvent(title: "Done", type: "Button")
       croppedViewController.blogName = blogName
       croppedViewController.image = cropView.croppedImage
       croppedViewController.postUrl = postUrl

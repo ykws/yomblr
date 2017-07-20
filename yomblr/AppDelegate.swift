@@ -10,6 +10,7 @@ import UIKit
 import Keys
 import TMTumblrSDK
 import ChameleonFramework
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     TMAPIClient.sharedInstance().oAuthConsumerKey = keys.tumblrOAuthConsumerKey
     TMAPIClient.sharedInstance().oAuthConsumerSecret = keys.tumblrOAuthConsumerSecret
+    
+    FirebaseApp.configure()
     
     UINavigationBar.appearance().barTintColor = UIColor.TumblrColor()
     UINavigationBar.appearance().tintColor = FlatWhite()

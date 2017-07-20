@@ -6,21 +6,18 @@ Minimum Tumblr Client. Post cropped photo your likes on Tumblr.
 
 ## Installation
 
-Install `cocoapods-keys`.
+### Install `cocoapods-keys`.
 
 ```
 $ bundle install --path vendor/bundle
 ```
 
-Get `OAuth consumer Key` and `OAuth consumer Secret` on Tumblr.
+### Get `OAuth consumer Key` and `OAuth consumer Secret` on Tumblr.
 
 https://www.tumblr.com/oauth/apps
 
-Get `App ID` on Hockey.
+### Install libraries and set up keys
 
-https://rink.hockeyapp.net/manage/dashboard
-
-Install libraries and set up keys.
 Type your keys.
 
 ```
@@ -38,20 +35,28 @@ Saved TumblrOAuthConsumerSecret to yomblr.
 ...
 ```
 
+### Set up Firebase
+
+https://firebase.google.com/
+
 ## Use libraries
 
-Tumblr SDK for iOS
+### Tumblr SDK for iOS
 
 http://tumblr.github.com/TMTumblrSDK
 
-A key value store for application keys
+### A key value store for application keys
 
 https://github.com/orta/cocoapods-keys
 
-Asynchronous image downloader
+### Asynchronous image downloader
 
 https://github.com/rs/SDWebImage
 
-Crop image
+### Crop image
 
 https://github.com/artemkrachulov/AKImageCropperView
+
+### Firebase
+
+https://github.com/firebase/firebase-ios-sdk

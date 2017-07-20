@@ -26,6 +26,8 @@
 		1F5BD6E51EFF97B4005CFCB7 /* UIViewController+MBProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BD6E31EFF97B4005CFCB7 /* UIViewController+MBProgressHUD.swift */; };
 		1F8CC1AF1EFB9D1C00398E3F /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CC1AE1EFB9D1C00398E3F /* CropViewController.swift */; };
 		1F8CC1B11EFBA89700398E3F /* CroppedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CC1B01EFBA89700398E3F /* CroppedViewController.swift */; };
+		1F91729B1F210F9200134AEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F91729A1F210F9200134AEB /* GoogleService-Info.plist */; };
+		1F91729D1F21131F00134AEB /* UIViewController+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F91729C1F21131F00134AEB /* UIViewController+Firebase.swift */; };
 		1FAAC93B1EFAC0C900D3CC49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAC93A1EFAC0C900D3CC49 /* AppDelegate.swift */; };
 		1FAAC93D1EFAC0C900D3CC49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAC93C1EFAC0C900D3CC49 /* ViewController.swift */; };
 		1FAAC9401EFAC0C900D3CC49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FAAC93E1EFAC0C900D3CC49 /* Main.storyboard */; };
@@ -64,6 +66,8 @@
 		1F5BD6E31EFF97B4005CFCB7 /* UIViewController+MBProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+MBProgressHUD.swift"; path = "Extensions/UIViewController+MBProgressHUD.swift"; sourceTree = "<group>"; };
 		1F8CC1AE1EFB9D1C00398E3F /* CropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
 		1F8CC1B01EFBA89700398E3F /* CroppedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CroppedViewController.swift; sourceTree = "<group>"; };
+		1F91729A1F210F9200134AEB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1F91729C1F21131F00134AEB /* UIViewController+Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Firebase.swift"; path = "Extensions/UIViewController+Firebase.swift"; sourceTree = "<group>"; };
 		1FAAC9371EFAC0C900D3CC49 /* yomblr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yomblr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FAAC93A1EFAC0C900D3CC49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FAAC93C1EFAC0C900D3CC49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 			children = (
 				1F5BD6E31EFF97B4005CFCB7 /* UIViewController+MBProgressHUD.swift */,
 				1F0537971F0B664000FB792E /* UIViewController+ChameleonFramework.swift */,
+				1F91729C1F21131F00134AEB /* UIViewController+Firebase.swift */,
 				1F07F1051F1F5ABE00043563 /* UIColorExtension.swift */,
 			);
 			name = Extensions;
@@ -182,6 +187,7 @@
 				1FAAC9411EFAC0C900D3CC49 /* Assets.xcassets */,
 				1FAAC9431EFAC0C900D3CC49 /* LaunchScreen.storyboard */,
 				1FAAC9461EFAC0C900D3CC49 /* Info.plist */,
+				1F91729A1F210F9200134AEB /* GoogleService-Info.plist */,
 			);
 			path = yomblr;
 			sourceTree = "<group>";
@@ -295,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FAAC9451EFAC0C900D3CC49 /* LaunchScreen.storyboard in Resources */,
+				1F91729B1F210F9200134AEB /* GoogleService-Info.plist in Resources */,
 				1FAAC9421EFAC0C900D3CC49 /* Assets.xcassets in Resources */,
 				1FAAC9401EFAC0C900D3CC49 /* Main.storyboard in Resources */,
 			);
@@ -414,6 +421,7 @@
 				1F0072D61EFF9F00006D24FA /* Dashboard.swift in Sources */,
 				1F07F1061F1F5ABE00043563 /* UIColorExtension.swift in Sources */,
 				1F0072D71EFF9F00006D24FA /* JSONDecodable.swift in Sources */,
+				1F91729D1F21131F00134AEB /* UIViewController+Firebase.swift in Sources */,
 				1F0072D31EFF9F00006D24FA /* PhotoPost.swift in Sources */,
 				1F07F1081F1F5FB100043563 /* CustomCell.swift in Sources */,
 				1F0072D11EFF9F00006D24FA /* JSONDecodeError.swift in Sources */,

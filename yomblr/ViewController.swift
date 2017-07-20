@@ -117,6 +117,7 @@ class ViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    logEvent(title: "Photo", type: "Image")
     let cell: CustomCell = tableView.cellForRow(at: indexPath) as! CustomCell
     crop(postIndex: indexPath.section, photoIndex: indexPath.row, image: cell.photo.image!)
   }
