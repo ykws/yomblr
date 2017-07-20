@@ -15,11 +15,3 @@ target 'yomblr' do
   end
 
 end
-
-plugin 'cocoapods-keys', {
-  :project => 'yomblr',
-  :keys => [
-    "TumblrOAuthConsumerKey",
-    "TumblrOAuthConsumerSecret"
-  ]
-}

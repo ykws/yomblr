@@ -17,22 +17,19 @@ Get `OAuth consumer Key` and `OAuth consumer Secret` on Tumblr.
 
 https://www.tumblr.com/oauth/apps
 
-Install libraries and set up keys.
-Type your keys.
+Install libraries.
 
 ```
 $ bundle exec pod install
+```
 
- CocoaPods-Keys has detected a keys mismatch for your setup.
- What is the key for TumblrOAuthConsumerKey
- > 
+Set up keys. Type your keys.
 
+```
+$ bundle exec keys set TumblrOAuthConsumerKey [your_key]
 Saved TumblrOAuthConsumerKey to yomblr.
- What is the key for TumblrOAuthConsumerSecret
- > 
-
+$ bundle exec keys set TumblrOAuthConsumerSecret [your_key]
 Saved TumblrOAuthConsumerSecret to yomblr.
-...
 ```
 
 ### Set up Firebase
