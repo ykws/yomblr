@@ -16,6 +16,9 @@ target 'yomblr' do
 
   plugin 'cocoapods-keys', {
     :project => 'yomblr',
-    :keys => []
+    :keys => [
+      'TumblrOAuthConsumerKey',
+      'TumblrOAuthConsumerSecret'
+    ]
   }
 end

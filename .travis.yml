@@ -2,9 +2,9 @@ osx_image: xcode8.3
 language: objective-c
 before_install:
 - bundle install --path vendor/bundle
-- bundle exec pod install --repo-update
 - bundle exec pod keys set TumblrOAuthConsumerKey $TUMBLR_OAUTH_CONSUMER_KEY
 - bundle exec pod keys set TumblrOAuthConsumerSecret $TUMBLR_OAUTH_CONSUMER_SECRET
+- bundle exec pod install --repo-update
 notifications:
   slack:
     secure: nzpLsYqcWv/ZRlBTilzAJ+69jD8Xm35/lBJpvyisozpI1zZGtdWyr7J8pxjvsraYsOd/8irotvcy0F2OebbTJ3k8ER/Zt239pIsDp7PcU3lY658OTv+x7U4Fay0poPtZFcEcfIY9CK/FamngZGs/JhtLw4avn3tv6gaZ7yTKlcC36t8fpk7278OMh4rjXJKHdOomeMrfWaKqCRTn1RT9bcqH4QzbrMGt1YeMUKhogn/nyaGL9rJMbvcWXMoAYug2kOr6jOr1BwNdgUT0pDGjnrXdHF6HZAGsBOSRQjrN/t9d/nEZ/EAw1q7taitOoG5pWftmsf+dU0h7wb1YacSNbxeKDo6DnLPB+zRXQU5IXh6q0s2949LtUga2MFGnwPf3B/3Ff2UVjac5dtbWtE8EKMFiVgMJRkCDtohHotrrq4pMYSX32a8AN3Q/FtyoRGrOVg7CIpEdZr0PAfUFC8VdrBNVw69py82gR82ajBklH6ASmD281Re1CWuT5ZILsW3Gh386D61KjGYiTuqZef7AUaYXShSeoHUHUXVPl7ECvuzvOohRVx0GmOAJdLYBwvnzX/AxuQT+GeFWRm21xTQ1agzOw3dHmpiLsGWxtkYREPxtA3SRvzS9gr3LjtQShOWgtjwINXuPtLynB8A5wlDseqBXQrDJCi/4uoXMrak+Pm0=
