@@ -3,7 +3,7 @@ platform :ios, '9.0'
 target 'yomblr' do
   use_frameworks!
   
-  pod 'TMTumblrSDK', git: 'https://github.com/tumblr/TMTumblrSDK.git'
+  pod 'TMTumblrSDK', git: 'https://github.com/ykws/TMTumblrSDK.git', branch: 'develop'
   pod 'SDWebImage'
   pod 'AKImageCropperView', git: 'https://github.com/ykws/AKImageCropperView.git', branch: 'develop-improve'
   pod 'MBProgressHUD'
@@ -14,4 +14,7 @@ target 'yomblr' do
     inherit! :search_paths
   end
 
+  plugin 'cocoapods-keys', {
+    :project => 'yomblr'
+  }
 end

@@ -32,21 +32,21 @@ PODS:
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
   - Spectacles (1.0.1)
-  - TMTumblrSDK (4.0.5):
-    - TMTumblrSDK/Activity (= 4.0.5)
-    - TMTumblrSDK/APIClient (= 4.0.5)
-    - TMTumblrSDK/AppClient (= 4.0.5)
-    - TMTumblrSDK/Core (= 4.0.5)
-  - TMTumblrSDK/Activity (4.0.5)
-  - TMTumblrSDK/APIClient (4.0.5):
+  - TMTumblrSDK (4.0.4):
+    - TMTumblrSDK/Activity (= 4.0.4)
+    - TMTumblrSDK/APIClient (= 4.0.4)
+    - TMTumblrSDK/AppClient (= 4.0.4)
+    - TMTumblrSDK/Core (= 4.0.4)
+  - TMTumblrSDK/Activity (4.0.4)
+  - TMTumblrSDK/APIClient (4.0.4):
     - JXHTTP
-    - TMTumblrSDK/APIClient/Authentication (= 4.0.5)
-  - TMTumblrSDK/APIClient/Authentication (4.0.5):
+    - TMTumblrSDK/APIClient/Authentication (= 4.0.4)
+  - TMTumblrSDK/APIClient/Authentication (4.0.4):
     - JXHTTP
     - TMTumblrSDK/Core
-  - TMTumblrSDK/AppClient (4.0.5):
+  - TMTumblrSDK/AppClient (4.0.4):
     - TMTumblrSDK/Core
-  - TMTumblrSDK/Core (4.0.5):
+  - TMTumblrSDK/Core (4.0.4):
     - Spectacles (~> 1.0)
 
 DEPENDENCIES:
@@ -56,7 +56,7 @@ DEPENDENCIES:
   - Keys (from `Pods/CocoaPodsKeys`)
   - MBProgressHUD
   - SDWebImage
-  - TMTumblrSDK (from `https://github.com/tumblr/TMTumblrSDK.git`)
+  - TMTumblrSDK (from `https://github.com/ykws/TMTumblrSDK.git`, branch `develop`)
 
 EXTERNAL SOURCES:
   AKImageCropperView:
@@ -67,7 +67,8 @@ EXTERNAL SOURCES:
   Keys:
     :path: Pods/CocoaPodsKeys
   TMTumblrSDK:
-    :git: https://github.com/tumblr/TMTumblrSDK.git
+    :branch: develop
+    :git: https://github.com/ykws/TMTumblrSDK.git
 
 CHECKOUT OPTIONS:
   AKImageCropperView:
@@ -77,8 +78,8 @@ CHECKOUT OPTIONS:
     :commit: 6dd284bde21ea2e7f9fd89bc36f40df16e16369d
     :git: https://github.com/ViccAlexander/Chameleon.git
   TMTumblrSDK:
-    :commit: c8013d5e5b51e937c29f7aa7aef2d34951e82895
-    :git: https://github.com/tumblr/TMTumblrSDK.git
+    :commit: bb3997b6e2c4dc64ea367431eb88aec87e32f481
+    :git: https://github.com/ykws/TMTumblrSDK.git
 
 SPEC CHECKSUMS:
   AKImageCropperView: 3f83fcee0c89c24ea121bd7283c15ef693006f2f
@@ -94,8 +95,8 @@ SPEC CHECKSUMS:
   nanopb: 22bc080fa3955e2116b6ff3ee6c2cb3c15ab97cb
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   Spectacles: 8dc60711140320653724560e2d6bbb8a8f0940e4
-  TMTumblrSDK: bafecf74bb5dae10d42536d35229e40c18e9e4a1
+  TMTumblrSDK: 7b253e968a31f515aee0ee5f7e5faa8b7b0d0470
 
-PODFILE CHECKSUM: f26c43c842b6bd05fe628fd1287cf8e2cd236321
+PODFILE CHECKSUM: 11d8f4272e8e202caaadcd2103159bff4057a870
 
 COCOAPODS: 1.2.1

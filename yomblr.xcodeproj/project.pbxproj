@@ -28,6 +28,29 @@
 		1F8CC1B11EFBA89700398E3F /* CroppedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CC1B01EFBA89700398E3F /* CroppedViewController.swift */; };
 		1F91729B1F210F9200134AEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F91729A1F210F9200134AEB /* GoogleService-Info.plist */; };
 		1F91729D1F21131F00134AEB /* UIViewController+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F91729C1F21131F00134AEB /* UIViewController+Firebase.swift */; };
+		1F9172CC1F21847A00134AEB /* UIViewController+ChameleonFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0537971F0B664000FB792E /* UIViewController+ChameleonFramework.swift */; };
+		1F9172CD1F21847F00134AEB /* UIViewController+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F91729C1F21131F00134AEB /* UIViewController+Firebase.swift */; };
+		1F9172CE1F21848300134AEB /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F07F1051F1F5ABE00043563 /* UIColorExtension.swift */; };
+		1F9172CF1F21848C00134AEB /* JSONDecodeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0072C81EFF9F00006D24FA /* JSONDecodeError.swift */; };
+		1F9172D01F21848F00134AEB /* Likes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0072C91EFF9F00006D24FA /* Likes.swift */; };
+		1F9172D11F21849200134AEB /* PhotoPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0072CA1EFF9F00006D24FA /* PhotoPost.swift */; };
+		1F9172D21F21849500134AEB /* AltSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0072CB1EFF9F00006D24FA /* AltSize.swift */; };
+		1F9172D31F21849900134AEB /* Blog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0072CC1EFF9F00006D24FA /* Blog.swift */; };
+		1F9172D41F21849C00134AEB /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0072CD1EFF9F00006D24FA /* Dashboard.swift */; };
+		1F9172D51F21849F00134AEB /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0072CE1EFF9F00006D24FA /* JSONDecodable.swift */; };
+		1F9172D61F2184A300134AEB /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0072CF1EFF9F00006D24FA /* Photo.swift */; };
+		1F9172D71F2184A600134AEB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0072D01EFF9F00006D24FA /* User.swift */; };
+		1F9172D81F2184AA00134AEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAC93A1EFAC0C900D3CC49 /* AppDelegate.swift */; };
+		1F9172D91F2184AD00134AEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAC93C1EFAC0C900D3CC49 /* ViewController.swift */; };
+		1F9172DA1F2184B000134AEB /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F05379C1F0B78DF00FB792E /* WebViewController.swift */; };
+		1F9172DB1F2184B300134AEB /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F05379E1F0BC2F100FB792E /* ImageViewController.swift */; };
+		1F9172DC1F2184B600134AEB /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CC1AE1EFB9D1C00398E3F /* CropViewController.swift */; };
+		1F9172DD1F2184B900134AEB /* CroppedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CC1B01EFBA89700398E3F /* CroppedViewController.swift */; };
+		1F9172DE1F2184BC00134AEB /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F07F1071F1F5FB100043563 /* CustomCell.swift */; };
+		1F9172DF1F2184C400134AEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FAAC93E1EFAC0C900D3CC49 /* Main.storyboard */; };
+		1F9172E01F2184C800134AEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FAAC9411EFAC0C900D3CC49 /* Assets.xcassets */; };
+		1F9172E11F2184CC00134AEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FAAC9431EFAC0C900D3CC49 /* LaunchScreen.storyboard */; };
+		1F9172E21F2184D700134AEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F91729A1F210F9200134AEB /* GoogleService-Info.plist */; };
 		1FAAC93B1EFAC0C900D3CC49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAC93A1EFAC0C900D3CC49 /* AppDelegate.swift */; };
 		1FAAC93D1EFAC0C900D3CC49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAC93C1EFAC0C900D3CC49 /* ViewController.swift */; };
 		1FAAC9401EFAC0C900D3CC49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FAAC93E1EFAC0C900D3CC49 /* Main.storyboard */; };
@@ -311,6 +334,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F9172E11F2184CC00134AEB /* LaunchScreen.storyboard in Resources */,
+				1F9172E21F2184D700134AEB /* GoogleService-Info.plist in Resources */,
+				1F9172E01F2184C800134AEB /* Assets.xcassets in Resources */,
+				1F9172DF1F2184C400134AEB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,8 +468,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F9172DC1F2184B600134AEB /* CropViewController.swift in Sources */,
 				1FAAC9501EFAC0C900D3CC49 /* yomblrTests.swift in Sources */,
+				1F9172DD1F2184B900134AEB /* CroppedViewController.swift in Sources */,
 				1F5BD6E51EFF97B4005CFCB7 /* UIViewController+MBProgressHUD.swift in Sources */,
+				1F9172D41F21849C00134AEB /* Dashboard.swift in Sources */,
+				1F9172D81F2184AA00134AEB /* AppDelegate.swift in Sources */,
+				1F9172D51F21849F00134AEB /* JSONDecodable.swift in Sources */,
+				1F9172D11F21849200134AEB /* PhotoPost.swift in Sources */,
+				1F9172CF1F21848C00134AEB /* JSONDecodeError.swift in Sources */,
+				1F9172D71F2184A600134AEB /* User.swift in Sources */,
+				1F9172D61F2184A300134AEB /* Photo.swift in Sources */,
+				1F9172D21F21849500134AEB /* AltSize.swift in Sources */,
+				1F9172DB1F2184B300134AEB /* ImageViewController.swift in Sources */,
+				1F9172CE1F21848300134AEB /* UIColorExtension.swift in Sources */,
+				1F9172CC1F21847A00134AEB /* UIViewController+ChameleonFramework.swift in Sources */,
+				1F9172DA1F2184B000134AEB /* WebViewController.swift in Sources */,
+				1F9172D31F21849900134AEB /* Blog.swift in Sources */,
+				1F9172CD1F21847F00134AEB /* UIViewController+Firebase.swift in Sources */,
+				1F9172D91F2184AD00134AEB /* ViewController.swift in Sources */,
+				1F9172DE1F2184BC00134AEB /* CustomCell.swift in Sources */,
+				1F9172D01F21848F00134AEB /* Likes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
