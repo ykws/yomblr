@@ -26,9 +26,9 @@ $ bundle exec pod install
 Set up keys. Type your keys.
 
 ```
-$ bundle exec keys set TumblrOAuthConsumerKey [your_key]
+$ bundle exec pod keys set TumblrOAuthConsumerKey [your_key]
 Saved TumblrOAuthConsumerKey to yomblr.
-$ bundle exec keys set TumblrOAuthConsumerSecret [your_key]
+$ bundle exec pod keys set TumblrOAuthConsumerSecret [your_key]
 Saved TumblrOAuthConsumerSecret to yomblr.
 ```
 
