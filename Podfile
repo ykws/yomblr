@@ -15,6 +15,7 @@ target 'yomblr' do
   end
 
   plugin 'cocoapods-keys', {
-    :project => 'yomblr'
+    :project => 'yomblr',
+    :keys => []
   }
 end
