@@ -3,7 +3,8 @@ platform :ios, '9.0'
 target 'yomblr' do
   use_frameworks!
   
-  pod 'TMTumblrSDK', git: 'https://github.com/ykws/TMTumblrSDK.git', branch: 'develop'
+  pod 'TMTumblrSDK'
+  pod 'JXHTTP', git: 'https://github.com/ykws/JXHTTP', branch: 'develop'
   pod 'SDWebImage'
   pod 'AKImageCropperView', git: 'https://github.com/ykws/AKImageCropperView.git', branch: 'develop-improve'
   pod 'MBProgressHUD'
