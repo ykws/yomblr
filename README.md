@@ -5,6 +5,10 @@
 
 Minimum Tumblr Client. Post cropped photo your likes on Tumblr.
 
+<a href="https://itunes.apple.com/us/app/yomblr/id1259790615?mt=8">
+  <img alt="Download on the App Store" title="App Store" src="http://i.imgur.com/8fD0fjB.png" width="130">
+</a>
+  
 ## Installation
 
 Install `cocoapods-keys`.
