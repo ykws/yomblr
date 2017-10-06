@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/ykws/yomblr.svg?branch=master)](https://travis-ci.org/ykws/yomblr)
 ![Swift](https://img.shields.io/badge/Swift-3.1-orange.svg)
+[![Join the chat at https://gitter.im/yomblr/Lobby](https://badges.gitter.im/yomblr/Lobby.svg)](https://gitter.im/yomblr/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Minimum Tumblr Client. Post cropped photo your likes on Tumblr.
 
