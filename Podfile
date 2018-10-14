@@ -8,7 +8,7 @@ target 'yomblr' do
   pod 'SDWebImage'
   pod 'AKImageCropperView', git: 'https://github.com/ykws/AKImageCropperView.git', branch: 'develop-improve'
   pod 'MBProgressHUD'
-  pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
+  pod 'ChameleonFramework/Swift', :git => 'https://github.com/ykws/Chameleon.git', branch: 'develop'
   pod 'Firebase'
 
   target 'yomblrTests' do
