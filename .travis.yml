@@ -1,6 +1,6 @@
 osx_image: xcode10
 language: objective-c
-xcode_project: yomblr.xcworkspace
+xcode_workspace: yomblr.xcworkspace
 xcode_scheme: yomblr
 before_install:
 - bundle install --path vendor/bundle
