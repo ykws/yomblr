@@ -74,7 +74,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AKImageCropperView:
-    :commit: cf38f48d234d688792431ea9d304d581e3da9d69
+    :commit: a10700f09f38614c181f4189323fe8678aa80761
     :git: https://github.com/ykws/AKImageCropperView.git
   ChameleonFramework:
     :commit: 345733d979fa105c105e9635d8a4e57822bf5525
