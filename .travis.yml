@@ -1,5 +1,7 @@
 osx_image: xcode10
 language: objective-c
+xcode_project: yomblr.xcworkspace
+xcode_scheme: yomblr
 before_install:
 - bundle install --path vendor/bundle
 - bundle exec pod keys set TumblrOAuthConsumerKey $TUMBLR_OAUTH_CONSUMER_KEY
